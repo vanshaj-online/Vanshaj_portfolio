@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Secular One', sans-serif;
+    color: #8c73d4;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    overflow: scroll;
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+
+    html,
+    body {
+        height: 100vh;
+    }
+
+    body{
+        background: url(./images/shape.svg);
+    }
+
+    .top {
+        height: 8%;
+        width: 100%;
+        position: fixed;
+        z-index: 9;
+    }
+
+    .nav {
+        width: 100%;
+        background-color: #8c73d4;
+        height: 100%;
+        /* position: sticky; */
+        /* box-shadow: 0 -10px 15px 2px grey ; */
+        display: flex;
+        z-index: 100;
+        justify-content: space-between;
+    }
+
+    .menu {
+        background: #8c73d4;
+        height: 40vh;
+        top: 0;
+        border-radius: 0 0 30px 30px;
+        width: 100%;
+        position: absolute;
+        transform: translateY(-100%);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .active .menu {
+        transform: translateY(0);
+        opacity: 1;
+        position: absolute;
+        visibility: visible;
+        z-index: 999;
+    }
+
+    .menu li {
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .menu li ul {
+        margin: 2vh 0;
+    }
+
+    .menu li ul p{
+        font-size: 6vw;
+        cursor: pointer;
+        color: white;
+    }
+
+    .menu li ul a {
+        text-decoration: none;
+        height: min-content;
+        font-size: 6vw;
+        color: white;
+    }
+
+    .social{
+        height: 18vw;
+        width: 55%;
+        margin: 1vh;
+        position: absolute;
+        bottom: 8vw;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    
+    .social > div{
+        width: 33.3%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .show .social{
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        margin-top: 1vw;
+        bottom: 3vw;
+    }
+    
+
+    .social a{
+        width: max-content;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .social a span{
+        color: white;
+        text-align: center;
+    }
+
+    .social a img{
+        height: 11vw;
+    }
+
+    .left-nav {
+        width: 70px;
+        height: 100%;
+    }
+
+    .right-nav {
+        width: 70px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-nav img {
+        height: 7vw;
+        opacity: 1;
+        /* cursor: pointer; */
+    }
+
+    .right-nav #unclick {
+        display: none;
+    }
+
+    .active .right-nav #unclick {
+        display: block;
+        z-index: 1000;
+    }
+
+    .active .right-nav #click {
+        display: none;
+    }
+
+    .section {
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .image {
+        height: 50%;
+        padding: 0 12px;
+        width: 100%;
+        display: flex;
+    }
+
+    .image>div:first-child {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 3vw;
+    }
+
+    .name>* {
+        font-size: 10vw;
+        text-align: left;
+        color: #8c73d4;
+        letter-spacing: 1px;
+    }
+
+    .name>h3:nth-child(2) {
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 2px #8c73d4;
+    }
+
+    .active .image,
+    .active .about {
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+        transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+    }
+
+    .image>div:last-child {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image img {
+        height: auto;
+        width: 45vw;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .about {
+        height: 58%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        padding: 0 1.5vh;
+        letter-spacing: .5px;
+    }
+
+    .about div:first-child {
+        font-size: 11.5vw;
+        font-weight: 700;
+        font-family: 'Secular One', sans-serif;
+    }
+
+    .about div:first-child::before{
+        content: 'FRONTEND DEVELOPER';
+        position: absolute;
+        top: -.7vw;
+        left: -1.3vw;
+        color: black;
+        z-index: -1;
+        -webkit-text-stroke: #8c73d4 1.5px;
+    }
+
+    .about  > p {
+        font-size: calc(11.5vw / 2.5);
+        /* width: 80%; */
+        font-weight: 500;
+        margin: 1vh .5vh;
+    }
+
+    #id{
+        height: 100%;
+        width: 100%;
+    }
+}

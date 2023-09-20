@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
 
 
 * {
@@ -9,22 +12,28 @@
     color: #8c73d4;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     height: 100%;
     width: 100%;
     font-size: 10px;
-    overflow: scroll;
+    overflow: auto;
 }
+
 
 @media only screen and (min-width:320px) and (max-width:480px) {
 
     html,
     body {
+        scroll-behavior: smooth;
         height: 100vh;
     }
 
-    body{
+    body {
         background: url(./images/Shape.svg);
     }
 
@@ -39,8 +48,6 @@ body {
         width: 100%;
         background-color: #8c73d4;
         height: 100%;
-        /* position: sticky; */
-        /* box-shadow: 0 -10px 15px 2px grey ; */
         display: flex;
         z-index: 100;
         justify-content: space-between;
@@ -55,7 +62,6 @@ body {
         position: absolute;
         transform: translateY(-100%);
         z-index: 999;
-        opacity: 0;
         visibility: hidden;
         transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
         display: flex;
@@ -81,7 +87,7 @@ body {
         margin: 2vh 0;
     }
 
-    .menu li ul p{
+    .menu li ul p {
         font-size: 6vw;
         cursor: pointer;
         color: white;
@@ -92,55 +98,6 @@ body {
         height: min-content;
         font-size: 6vw;
         color: white;
-    }
-
-    .social{
-        height: 18vw;
-        width: 55%;
-        margin: 1vh;
-        position: absolute;
-        bottom: 8vw;
-        visibility: hidden;
-        opacity: 0;
-    }
-    
-    
-    .social > div{
-        width: 33.3%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .show .social{
-        visibility: visible;
-        opacity: 1;
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        margin-top: 1vw;
-        bottom: 3vw;
-    }
-    
-
-    .social a{
-        width: max-content;
-        height: max-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .social a span{
-        color: white;
-        text-align: center;
-    }
-
-    .social a img{
-        height: 11vw;
     }
 
     .left-nav {
@@ -176,6 +133,11 @@ body {
         display: none;
     }
 
+    .main {
+        height: 100%;
+        width: 100%;
+    }
+
     .section {
         height: 100%;
         width: 100%;
@@ -205,13 +167,14 @@ body {
         letter-spacing: 1px;
     }
 
+
     .name>h3:nth-child(2) {
         color: rgb(255, 255, 255);
         -webkit-text-stroke: 2px #8c73d4;
     }
 
-    .active .image,
-    .active .about {
+    .active .section,
+    .active .section-2 {
         -webkit-filter: blur(5px);
         filter: blur(5px);
         transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
@@ -233,7 +196,7 @@ body {
     }
 
     .about {
-        height: 58%;
+        height: 40%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -250,7 +213,7 @@ body {
         font-family: 'Secular One', sans-serif;
     }
 
-    .about div:first-child::before{
+    .about div:first-child h3::before {
         content: 'FRONTEND DEVELOPER';
         position: absolute;
         top: -.7vw;
@@ -260,15 +223,165 @@ body {
         -webkit-text-stroke: #8c73d4 1.5px;
     }
 
-    .about  > p {
+    .about>p {
         font-size: calc(11.5vw / 2.5);
-        /* width: 80%; */
-        font-weight: 500;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 700;
         margin: 1vh .5vh;
     }
 
-    #id{
+    .section-2 {
+        display: flex;
+        height: 86%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #page {
+        height: 85%;
+        width: 90%;
+        background-color: #b1b1b10f;
+        border-radius: 20px;
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(15px);
+        padding: .8vh 2vh;
+        overflow: hidden;
+    }
+
+    #page>div:last-child {
+        border: none;
+    }
+
+    .details {
+        width: 100%;
+        height: 33%;
+        border-bottom: 1.5px solid white;
+        padding: .8vh 0;
+        display: flex;
+        position: relative;
+    }
+
+    .details>div:first-child {
+        height: 100%;
+        width: 64%;
+        padding: 1vh .8vh;
+    }
+
+    .details>div:last-child {
+        height: 100%;
+        position: relative;
+        width: 38%;
+        padding: 1vh .8vh;
+    }
+
+    .details>div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #page>div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+    .details>div:first-child h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 8vw;
+    }
+
+    .details>div:first-child p {
+        font-size: calc(6.7vw / 1.618);
+        line-height: 1.1;
+        margin-top: 2vh;
+        font-family: 'Cabin', sans-serif;
+        font-weight: 600;
+    }
+
+    .details>div p {
+        color: #8c73d4;
+        background-image: -webkit-linear-gradient(315deg, #8c73d4 25%, #c847d6 87%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #ed {
+        height: 20vw;
+    }
+
+    .imge {
+        height: 40%;
+        width: 90%;
+        display: flex;
+        margin: -2vh 0;
+    }
+
+    .imge:nth-child(2) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .details:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2vh;
+    }
+
+    .details:last-child>div {
         height: 100%;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .details:last-child>div h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 6vw;
+    }
+
+    #div2 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .logo {
+        height: 16vw;
+        width: 16vw;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 50%;
+    }
+
+    .logo a {
+        height: min-content;
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        width: min-content;
+    }
+
+    .logo a span {
+        color: white;
+        display: none;
+    }
+
+    .logo a img {
+        height: 9vw;
+    }
+
+    .logo:last-child a img {
+        height: 14vw;
     }
 }

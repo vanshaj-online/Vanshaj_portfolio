@@ -193,6 +193,7 @@ body {
         width: 45vw;
         object-position: center;
         object-fit: cover;
+        border-radius: 500px;
     }
 
     .about {

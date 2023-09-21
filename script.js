@@ -1,19 +1,20 @@
 var nav = document.querySelector('.top')
 var section = document.querySelector('.section')
 var menu = document.querySelector('.img')
-var main = document.querySelector('.main')
+var newTop = document.querySelector('.add')
 
 menu.addEventListener('click',function(){
-    section.classList.toggle('active')
-    nav.classList.toggle('active')
-    main.classList.toggle('active')
-    
+    section.classList.add('active')
+    nav.classList.add('active')
+    newTop.classList.add('show')
+    document.querySelector('.menu').style.opacity = 1
 })
 
 document.querySelector('#unclick').addEventListener('click',function(){
     section.classList.remove('active')
     nav.classList.remove('active')
-    main.classList.toggle('active')
+    newTop.classList.remove('show')
+    document.querySelector('.menu').style.opacity = 0
 })
 
 

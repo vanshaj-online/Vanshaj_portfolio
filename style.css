@@ -1,19 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Secular+One&display=swap";
 
+@import "https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap";
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Secular One', sans-serif;
-    color: #8c73d4;
+    color: #8c73d4
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 
 html,
@@ -21,9 +19,8 @@ body {
     height: 100%;
     width: 100%;
     font-size: 10px;
-    overflow: auto;
+    overflow: auto
 }
-
 
 @media only screen and (min-width:320px) and (max-width:480px) {
 
@@ -32,19 +29,19 @@ body {
         height: 100%;
         width: 100%;
         scroll-behavior: smooth;
-        overflow-x: hidden;
+        overflow-x: hidden
     }
-    
+
     body {
         margin: 0;
         padding: 0;
-        background: url(./images/Shape.svg);
+        background: url(./images/Shape.svg)
     }
 
-    .add{
+    .add {
         width: 100%;
         height: auto;
-        transform: translateY(-1vh);
+        transform: translateY(-1vh)
     }
 
     .top {
@@ -53,43 +50,42 @@ body {
         position: sticky;
         margin: 0;
         background-color: #8c73d4;
-        transition: all ease-in-out .5s;
+        transition: all ease-in-out .5s
     }
-    
-    
-    .show .top{
+
+    .show .top {
         background: #8c73d4;
         height: 30vh;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column
     }
 
-    .menu{
-        visibility: hidden;
+    .menu {
+        visibility: hidden
     }
-    
-    .show .top .menu{
-        visibility: visible;
+
+    .show .top .menu {
+        visibility: visible
     }
 
     .menu li {
         list-style-type: none;
         text-align: center;
-        transition: .5s ease-in-out .5s;
+        transition: .5s ease-in-out .5s
     }
 
     .menu li ul {
-        margin: 1vh 0;
+        margin: 1vh 0
     }
 
     .menu li ul a {
         text-decoration: none;
         height: min-content;
         font-size: 5vw;
-        color: white;
+        color: #fff
     }
 
     .right-nav {
@@ -101,38 +97,37 @@ body {
         align-items: center;
         position: absolute;
         right: -5px;
-        top: 0;
+        top: 0
     }
 
     .right-nav img {
         height: 7vw;
-        opacity: 1;
+        opacity: 1
     }
 
     .right-nav #unclick {
-        display: none;
+        display: none
     }
 
     .active .right-nav #unclick {
         display: block;
-        z-index: 1000;
+        z-index: 1000
     }
 
     .active .right-nav #click {
-        display: none;
+        display: none
     }
 
     .section {
         height: 100vh;
-        width: 100%;
+        width: 100%
     }
-
 
     .image {
         height: 42%;
         padding: 0 12px;
         width: 100%;
-        display: flex;
+        display: flex
     }
 
     .image>div:first-child {
@@ -141,20 +136,19 @@ body {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 0 3vw;
+        padding: 0 3vw
     }
 
     .name>* {
         font-size: 10vw;
         text-align: left;
         color: #8c73d4;
-        letter-spacing: 1px;
+        letter-spacing: 1px
     }
 
-
     .name>h3:nth-child(2) {
-        color: rgb(255, 255, 255);
-        -webkit-text-stroke: 2px #8c73d4;
+        color: #fff;
+        -webkit-text-stroke: 2px #8c73d4
     }
 
     .image>div:last-child {
@@ -162,7 +156,7 @@ body {
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center
     }
 
     .image img {
@@ -171,7 +165,7 @@ body {
         object-position: center;
         object-fit: cover;
         border-radius: 100%;
-        margin-bottom: 2vw;
+        margin-bottom: 2vw
     }
 
     .about {
@@ -183,13 +177,13 @@ body {
         position: relative;
         text-align: center;
         padding: 0 1.5vh;
-        letter-spacing: .5px;
+        letter-spacing: .5px
     }
 
     .about div:first-child {
         font-size: 11.5vw;
         font-weight: 700;
-        font-family: 'Secular One', sans-serif;
+        font-family: 'Secular One', sans-serif
     }
 
     .about div:first-child h3::before {
@@ -197,16 +191,16 @@ body {
         position: absolute;
         top: -.7vw;
         left: -1.3vw;
-        color: black;
+        color: #000;
         z-index: -1;
-        -webkit-text-stroke: #8c73d4 1.5px;
+        -webkit-text-stroke: #8c73d4 1.5px
     }
 
     .about>p {
         font-size: calc(11.5vw / 2.5);
         font-family: 'Cabin', sans-serif;
         font-weight: 700;
-        margin: 1vh .5vh;
+        margin: 1vh .5vh
     }
 
     .section-2 {
@@ -214,7 +208,7 @@ body {
         height: 89vh;
         width: 100%;
         justify-content: center;
-        align-items: center;
+        align-items: center
     }
 
     #page {
@@ -225,58 +219,56 @@ body {
         backdrop-filter: blur(100px);
         -webkit-backdrop-filter: blur(15px);
         padding: .8vh 2vh;
-        overflow: hidden;
+        overflow: hidden
     }
 
     #page>div:last-child {
-        border: none;
+        border: none
     }
 
     .details {
         width: 100%;
         height: 33%;
-        border-bottom: 1.5px solid white;
+        border-bottom: 1.5px solid #fff;
         padding: .8vh 0;
         display: flex;
-        position: relative;
+        position: relative
     }
 
     .details>div:first-child {
         height: 100%;
         width: 64%;
-        padding: 1vh .8vh;
+        padding: 1vh .8vh
     }
 
     .details>div:last-child {
         height: 100%;
         position: relative;
         width: 38%;
-        padding: 1vh .8vh;
+        padding: 1vh .8vh
     }
 
     .details>div {
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column
     }
 
     #page>div:nth-child(2) {
         display: flex;
         justify-content: center;
-        flex-direction: row-reverse;
+        flex-direction: row-reverse
     }
 
     .details>div:first-child h3 {
-        font-family: 'Oswald', sans-serif;
-        font-size: 8vw;
+        font-size: 8vw
     }
 
     .details>div:first-child p {
         font-size: calc(6.7vw / 1.618);
-        line-height: 1.1;
-        margin-top: 2vh;
+        margin-top: 1vh;
         font-family: 'Cabin', sans-serif;
-        font-weight: 600;
+        font-weight: 600
     }
 
     .details>div p {
@@ -284,30 +276,30 @@ body {
         background-image: -webkit-linear-gradient(315deg, #8c73d4 25%, #c847d6 87%);
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent
     }
 
     #ed {
-        height: 20vw;
+        height: 20vw
     }
 
     .imge {
         height: 40%;
         width: 90%;
         display: flex;
-        margin: -2vh 0;
+        margin: -2vh 0
     }
 
     .imge:nth-child(2) {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row-reverse
     }
 
     .details:last-child {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 2vh;
+        padding: 2vh
     }
 
     .details:last-child>div {
@@ -316,12 +308,11 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: row;
+        flex-direction: row
     }
 
     .details:last-child>div h2 {
-        font-family: 'Oswald', sans-serif;
-        font-size: 6vw;
+        font-size: 6vw
     }
 
     #div2 {
@@ -329,7 +320,7 @@ body {
         justify-content: space-evenly;
         align-items: center;
         padding: 0;
-        margin: 0;
+        margin: 0
     }
 
     .logo {
@@ -340,7 +331,7 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        border-radius: 50%;
+        border-radius: 50%
     }
 
     .logo a {
@@ -348,20 +339,19 @@ body {
         display: grid;
         place-items: center;
         text-decoration: none;
-        width: min-content;
+        width: min-content
     }
 
     .logo a span {
-        color: white;
-        display: none;
+        color: #fff;
+        display: none
     }
 
     .logo a img {
-        height: 9vw;
+        height: 9vw
     }
 
     .logo:last-child a img {
-        height: 12vw;
+        height: 12vw
     }
-    /* postponed on 21/sep */
 }

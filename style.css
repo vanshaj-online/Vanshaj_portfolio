@@ -1,17 +1,35 @@
 @import "https://fonts.googleapis.com/css2?family=Secular+One&display=swap";
-
 @import "https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap";
+
+@font-face {
+    font-family: 'nunito';
+    src: url(./FONTS/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+    font-family: 'andika';
+    src: url(./FONTS/Andika-Regular.ttf);
+    font-family: gilroy;
+    src: url(./FONTS/Gilroy-ExtraBold.otf);
+    font-family: 'gilroy light';
+    src: url(./FONTS/Gilroy-Light.otf);
+    font-family: sign;
+    src: url(./FONTS/CedarvilleCursive-Regular.ttf);
+}
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Secular One', sans-serif;
-    color: #8c73d4
+    color: #8c73d4;
 }
 
-html {
-    scroll-behavior: smooth
+*::selection{
+    color: white;
+    background: #8c73d4;
+}
+
+.section img::selection{
+    background: none
 }
 
 html,
@@ -19,17 +37,342 @@ body {
     height: 100%;
     width: 100%;
     font-size: 10px;
-    overflow: auto
 }
 
-@media only screen and (min-width:320px) and (max-width:480px) {
+
+.add{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.desk-right-nav{
+    height: 100%;
+    width:7vw;
+    display: flex   ;
+    align-items: center;
+    justify-content: center;
+}
+
+.desk-right-nav a{
+    height: 60%;
+    width: 90%;
+    border: none;
+    display: grid;
+    place-content: center;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 10px;
+    background: #8c73d4;
+    color : white;
+    font-family: cabin;
+    transition: .2s all ease;
+}
+
+.desk-right-nav a:active{
+    transform: scale(.9);
+}
+
+.add img, .right-nav{
+    display: none;
+}
+
+.top{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top > div{
+    margin: 0 auto;
+}
+
+.left-nav{
+    height: 100%;
+    width: 5vw;
+    display: grid;
+    place-content: center;
+}
+
+.left-nav h3{
+    font-size: 2vw;
+    transform: rotate(-1deg);
+    font-family: sign;
+    display: inline;
+    font-weight: 100;
+}
+
+.menu{
+    width: 30%;
+    height: 100%;
+}
+
+.menu li{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu li ul{
+    position: relative;
+    padding: 0 5px;
+}
+
+.menu li ul::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: #8c73d4;
+    bottom: -2px;
+    left: -.1px;
+    transition: .3s .1s;
+    color: royalblue;
+}
+
+.menu li ul:hover::before{
+    width: 100%;
+}
+
+.menu li ul a{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-family: cabin;
+    text-decoration: none;
+}
+
+.section{
+    width: 100%;
+    position: relative;
+}
+
+.section img{
+    height: 15vw;
+    width: 15vw;
+    border-radius: 100%;
+}
+
+.image{
+    height: 109vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image>div:nth-child(2){
+    height: 50%;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    padding: 2vw;
+    justify-content: center;
+}
+
+
+.name{
+    display: none;
+}
+
+.text{
+    display: none;
+}
+
+.title{
+    height: 50%;
+    width: 100%;
+    padding: 2vw 0;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new{
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    gap: 20px;
+}
+
+.new > h3{
+    font-size: 4vw;
+    -webkit-text-stroke: #8c73d4 1.5px;
+    font-weight: 400;
+    cursor: default;
+    color: transparent;
+}
+
+.title > p{
+    /* margin-top: 5vh; */
+    font-size: 1.5vw;
+    font-weight: 400;
+    letter-spacing: -.2px;
+    cursor: default;
+    font-family: cabin, 'sans serif';
+}
+
+.title > p:hover{
+    transform: scale(1.05);
+    transition:.3s;
+    color: #8c73d4;
+}
+
+.new > h3:hover{
+    color: #8c73d4;
+    transform: scale(1.1);
+    transition:.3s;
+}
+
+.banner{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: hidden;
+    
+}
+
+.banner h1{
+    font-size: 9vw;
+    margin-right: 2vw;
+    position: relative;
+    z-index: 0;
+}
+
+.details{
+    display: none;
+}
+
+.about{
+display: none;
+}
+
+.section-2{
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+#page{
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me{
+    height: 100%;
+    width: 100%;
+    background: #856ad6;
+    display: flex;
+    justify-content: center;
+    padding: 0 3vh;
+    flex-direction: column;
+    cursor: default;
+}
+
+.about-me h2{
+    text-transform: uppercase;
+    color: #fff;
+    font-family: gilroy;
+    /* letter-spacing: -4px; */
+    font-size: 5vw;
+    font-family: 'andika';
+    font-weight: 900;
+}
+
+.about-me p{
+    font-size: 4vw;
+    font-weight: 600;
+    text-align: left;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'gilroy light', 'sans serif';
+}
+.about-me p span{
+    font-size: 4vw;
+    font-weight: 600;
+    text-align: left;
+    text-transform: capitalize;
+    font-family: 'gilroy light', 'sans serif';
+    color: salmon;
+}
+
+.about-me h2 span{
+    font-family: gilroy;
+    /* color: rgb(63, 238, 229); */
+    color: rgb(57, 190, 183);
+    border-radius: 9px;
+    letter-spacing: 1px;
+    font-weight: 900;
+}   
+
+.section-3{
+    width: 100%;
+    height: auto;
+}
+
+.social, .skills{
+    width: 100%;
+    height: 55vh;
+}
+
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.skills>div:first-child > h1{
+    text-transform: capitalize;
+    font-size: 6vw;
+    font-family: 'gilroy light';
+    font-weight: 700;
+    margin: 8vw 0 3vw 3vw;
+}
+
+.svg{
+    display: flex;
+    height: 35vh;
+    width: 100%;
+}
+
+.svg>div{
+    width: 4vw;
+    height: 4vh;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width:320px) and (max-width:480px) {    
+
+    *{
+        color: #8c73d4
+    }
 
     html,
     body {
         height: 100%;
         width: 100%;
         scroll-behavior: smooth;
-        overflow-x: hidden
+        overflow-x: hidden;
     }
 
     body {
@@ -72,6 +415,8 @@ body {
     }
 
     .menu li {
+        display: flex;
+        flex-direction: column;
         list-style-type: none;
         text-align: center;
         transition: .5s ease-in-out .5s
@@ -88,6 +433,10 @@ body {
         color: #fff
     }
 
+    .left-nav{
+        display: none;
+    }
+
     .right-nav {
         width: 70px;
         height: 8vh;
@@ -102,6 +451,7 @@ body {
 
     .right-nav img {
         height: 7vw;
+        display: inline;
         opacity: 1
     }
 
@@ -120,14 +470,19 @@ body {
 
     .section {
         height: 100vh;
-        width: 100%
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .image {
         height: 42%;
         padding: 0 12px;
         width: 100%;
-        display: flex
+        display: flex;
+        flex-direction: row;
     }
 
     .image>div:first-child {
@@ -135,15 +490,52 @@ body {
         height: 100%;
         display: flex;
         justify-content: center;
-        flex-direction: column;
         padding: 0 3vw
+    }
+
+    .name{
+        display: flex;
+        height: 100%;
+        justify-content: left;
+        width: 100%;
+        justify-content: left;
+        flex-direction: column;
     }
 
     .name>* {
         font-size: 10vw;
-        text-align: left;
         color: #8c73d4;
-        letter-spacing: 1px
+        letter-spacing: 1px;
+        display: inline;
+        justify-content: left;
+        align-items: center;
+        
+    }
+
+    .about{
+        height: 60%;
+        width: 90%;
+        border-radius: 30px;
+        background: #ebebeb34;
+        display: flex;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        justify-content: center;
+        padding: 3vw 3vw;
+    }
+
+    .about p{
+        font-size: 2.5vh;
+        text-align: center;
+    }
+
+    .new{
+        display: none;
+    }
+
+    .title>p{
+        display: none;
     }
 
     .name>h3:nth-child(2) {
@@ -168,57 +560,24 @@ body {
         margin-bottom: 2vw
     }
 
-    .about {
-        height: 40%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        text-align: center;
-        padding: 0 1.5vh;
-        letter-spacing: .5px
-    }
-
-    .about div:first-child {
-        font-size: 11.5vw;
-        font-weight: 700;
-        font-family: 'Secular One', sans-serif
-    }
-
-    .about div:first-child h3::before {
-        content: 'FRONTEND DEVELOPER';
-        position: absolute;
-        top: -.7vw;
-        left: -1.3vw;
-        color: #000;
-        z-index: -1;
-        -webkit-text-stroke: #8c73d4 1.5px
-    }
-
-    .about>p {
-        font-size: calc(11.5vw / 2.5);
-        font-family: 'Cabin', sans-serif;
-        font-weight: 700;
-        margin: 1vh .5vh
-    }
-
     .section-2 {
         display: flex;
         height: 89vh;
         width: 100%;
         justify-content: center;
-        align-items: center
+        align-items: center;
     }
 
     #page {
         height: 85%;
         width: 90%;
-        background-color: #b1b1b10f;
+        background-color: #b1b1b126;
+        display: flex;
         border-radius: 20px;
         backdrop-filter: blur(100px);
         -webkit-backdrop-filter: blur(15px);
         padding: .8vh 2vh;
+        /* justify-content: center; */
         overflow: hidden
     }
 
@@ -353,5 +712,17 @@ body {
 
     .logo:last-child a img {
         height: 12vw
+    }
+
+    .banner{
+        display: none;
+    }
+
+    .about-me{
+        display: none;
+    }
+
+    .desk-right-nav{
+        display: none;
     }
 }

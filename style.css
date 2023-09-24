@@ -725,4 +725,8 @@ display: none;
     .desk-right-nav{
         display: none;
     }
+
+    .section-3{
+        display : none;
+    }
 }

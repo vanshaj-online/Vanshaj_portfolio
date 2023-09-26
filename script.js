@@ -20,13 +20,31 @@ var  init= function(){
 }
 init()
 
+var clutter = '';
+var pbreak = document.querySelector('.about-me>p')
+pbreak.textContent.split(' ').forEach(function(dets){
+  clutter += `<span>${' '+dets}</span>`
+
+  pbreak.innerHTML = clutter
+})
+
+
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector(".main"),
-  smooth: true
+  smooth: true,
+  smartphone:{
+    smooth: true
+  },
+  tablet:{
+    smooth: true
+  }
 });
 // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
 locoScroll.on("scroll", ScrollTrigger.update);
@@ -82,20 +100,21 @@ tl.from('.about-me h2',{
   scrollTrigger : {
     trigger : '.about-me h2',
     scroller : '.main',
-    start : '5% bottom',
-    end:'top top',
+    start : 'top 100%',
+    end:'bottom 80%',
     scrub : true
   }
 })
 
-tl.from('.about-me p',{
-  opacity : 0,
-  stagger : true,
+tl.to('.about-me>p>span',{
+  color : 'white',
+  opacity:1,
+  stagger : .5,
   scrollTrigger : {
-    trigger : '.about-me p',
+    trigger : '.about-me>p>span',
     scroller : '.main',
-    start : '5% bottom',
-    end:'top top',
-    scrub : true
+    start : 'top bottom',
+    end:'bottom top',
+    scrub : 1.5 
   }
 })

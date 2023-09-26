@@ -36,7 +36,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    font-size: 10px;
+    font-size: 1vw;
 }
 
 
@@ -59,9 +59,10 @@ body {
     height: 60%;
     width: 90%;
     border: none;
-    display: grid;
-    place-content: center;
-    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3vw;
     text-decoration: none;
     border-radius: 10px;
     background: #8c73d4;
@@ -142,7 +143,7 @@ body {
 .menu li ul a{
     display: flex;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1.5vw;
     font-family: cabin;
     text-decoration: none;
 }
@@ -175,6 +176,13 @@ body {
     justify-content: center;
 }
 
+.me img{
+    height: 25rem;
+    width: 25rem;
+    object-fit: cover;
+    object-position: center;
+}
+
 
 .name{
     display: none;
@@ -203,7 +211,7 @@ body {
 }
 
 .new > h3{
-    font-size: 4vw;
+    font-size: 4rem;
     -webkit-text-stroke: #8c73d4 1.5px;
     font-weight: 400;
     cursor: default;
@@ -263,22 +271,24 @@ display: none;
 }
 
 #page{
-    height: 120vh;
+    height: 90vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 vw;
 }
 
 .about-me{
     height: 100%;
-    width: 100%;
+    width: 42%;
     background: #856ad6;
+    border-radius: 20px 0 0 20px;
     display: flex;
     justify-content: center;
-    padding: 0 3vh;
+    padding-left: 5vh;
     flex-direction: column;
+    position: relative;
     cursor: default;
 }
 
@@ -287,40 +297,58 @@ display: none;
     color: #fff;
     font-family: gilroy;
     /* letter-spacing: -4px; */
-    font-size: 5vw;
+    font-size: 2.5vw;
     font-family: 'andika';
     font-weight: 900;
+    margin: 2vh 0;
 }
 
 .about-me p{
-    font-size: 4vw;
+    font-size: 2vw;
     font-weight: 600;
-    text-align: left;
-    color: #fff;
+    text-align: justify;
     text-transform: capitalize;
     font-family: 'gilroy light', 'sans serif';
-}
-.about-me p span{
-    font-size: 4vw;
-    font-weight: 600;
-    text-align: left;
-    text-transform: capitalize;
-    font-family: 'gilroy light', 'sans serif';
-    color: salmon;
 }
 
-.about-me h2 span{
+.about-me h2 span{  
     font-family: gilroy;
-    /* color: rgb(63, 238, 229); */
-    color: rgb(57, 190, 183);
+    color: rgb(250, 250, 54);
     border-radius: 9px;
     letter-spacing: 1px;
-    font-weight: 900;
+    font-size: 2.5vw;
 }   
+
+.about-me p>*{
+    font-family: 'gilroy light';
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+.photo{
+    height: 100%;
+    width: 42%;
+    background: #856ad6;
+    border-radius: 0px 20px 20px 0px;
+    display: grid;
+    place-content: center;
+}
+
+.photo img{
+    height: 65vh;
+    width: 25vw;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
 
 .section-3{
     width: 100%;
     height: auto;
+    margin-top: 3vw;
+    flex-direction: column;
+    display: flex;
+    justify-content: left;
 }
 
 .social, .skills{
@@ -330,17 +358,34 @@ display: none;
 
 .skills{
     display: flex;
-    align-items: center;
+    position: relative;
     justify-content: left;
     flex-direction: column;
 }
+ 
+.skills>*{
+    margin: 2vw 0 1.5vw 2vw;
+    font-family: 'gilroy light';
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+.skills>h4{
+    width: 27%;
+    border-radius: 7px;
+    text-transform: capitalize;
+    padding: 0.5vh 1vh;
+    background: #dadada8c;
+    margin-left: 3vw;
+    color: #868585;
+    height: min-content;
+}
 
 .skills>div:first-child > h1{
-    text-transform: capitalize;
     font-size: 6vw;
     font-family: 'gilroy light';
     font-weight: 700;
-    margin: 8vw 0 3vw 3vw;
+    /* margin: 8vw 0 3vw 3vw; */
 }
 
 .svg{
@@ -350,14 +395,38 @@ display: none;
 }
 
 .svg>div{
-    width: 4vw;
-    height: 4vh;
+    width: 7vw;
+    height: 7vw;
+    display: grid;
+    place-content: center;
+    margin: 0 2vh;
+    border-radius: 20px;
+    background: #dadada8c;
 }
 
+.svg>div>img{
+    height: 5vw;
+    width: 5vw;
+    object-fit: cover;
+    object-position: center;
+}
 
+.free-space{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 5vh;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position: center;
+}
 
-
-
+.free-space>img{
+    height: 100%;
+    width: 100%;
+}
 
 
 
@@ -724,9 +793,5 @@ display: none;
 
     .desk-right-nav{
         display: none;
-    }
-
-    .section-3{
-        display : none;
     }
 }

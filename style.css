@@ -177,8 +177,8 @@ body {
 }
 
 .me img{
-    height: 25rem;
-    width: 25rem;
+    height: 18rem;
+    width: 18rem;
     object-fit: cover;
     object-position: center;
 }

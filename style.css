@@ -716,7 +716,7 @@ html {
 
     .about {
         height: 60%;
-        width: 90%;
+        width: 95%;
         border-radius: 30px;
         background: #ebebeb34;
         display: flex;
@@ -727,7 +727,9 @@ html {
     }
 
     .about p {
-        font-size: 2.5vh
+        font-size: 2.5vh;
+        text-align: justify;
+        width: 90%;
     }
 
     .name>h3:nth-child(2) {
@@ -770,6 +772,7 @@ html {
         background-color: #b1b1b126;
         display: flex;
         border-radius: 20px;
+        flex-direction: column;
         backdrop-filter: blur(100px);
         -webkit-backdrop-filter: blur(15px);
         padding: .8vh 2vh;
@@ -902,6 +905,27 @@ html {
 
     .logo:last-child a img {
         height: 12vw
+    }
+
+    .photo{
+        display: none;
+        height: 0px;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .gate-main{
+        display: none;
+        height: 0px;
+    }
+
+    .projects{
+        display: none;
+        height: 0px;
+    }
+
+    .image{
+        opacity: 1;
     }
 }
 

@@ -29,7 +29,6 @@ gsap.timeline({
         scroller: '.main',
         start : 'bottom 15%',
         end : 'bottom -50%',
-        markers : true,
         scrub: 1
     }
 })

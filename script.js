@@ -7,37 +7,38 @@ gsap.timeline({
         start: '50% 50%',
         end: 'bottom top',
         scrub : true,
-        pin : true
+        pin : true,
     }
 })
 .to('.top-close',{
-    y : "-100%"
+    x : "-100%"
 },'a')
 .to('.bottom-close',{
-    y : '100%'
+    x : '100%'
 },'a')
 .to('#ttext',{
-    y : '30%'
+    x : '30%'
 },'a')
 .to('#btext',{
-    y : '-30%'
+    x : '-30%'
 },'a')
 
 gsap.timeline({
     scrollTrigger :{
         trigger : '.top-close',
         scroller: '.main',
-        start : 'bottom 15%',
-        end : 'bottom -50%',
-        scrub: 1
+        start : 'bottom 40%',
+        end : 'bottom 22%',
+        scrub: 1,
+        // markers : true
     }
 })
 .from('.skills > *',{
     opacity : 0,
-    // x : '-50%',
+    y : '50%',
 },'b')
 .from('.social > h1 ',{
     opacity: 0,
-    // x : '50%',
+    y : '20%',
 },'b')
 

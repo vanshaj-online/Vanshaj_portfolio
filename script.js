@@ -46,7 +46,7 @@ gsap.timeline({
 .from('.svg > div',{
     opacity : 0,
     y : '50%',
-    stagger : 0.3
+    stagger : 0.5
 },'b')
 .from('.social > h1 ',{
     opacity: 0,
@@ -58,19 +58,42 @@ gsap.timeline({
         trigger: '#page',
         scroller:'.main',
         start : 'top bottom',
-        end: 'bottom 90%',
-        // scrub: 2,
+        end: 'bottom 70%',
+        scrub: 2,
     }
 })
 .from('.about-me',{
     width:'30%',
+    y : '50%'
 },'width')
 .from('.photo',{
     width:'30%',
+    y : '50%'
 },'width') 
 
 gsap.to('.main > *',{
     opacity : 1,
     duration : 1,
     delay : .6
+})
+
+document.querySelectorAll('.hover').forEach(function(elem){
+    elem.addEventListener('mousemove',function(details){
+        var elem_top = elem.getBoundingClientRect().top 
+        var elem_left = elem.getBoundingClientRect().left 
+        var mouseInY = details.clientY - elem_top;
+        var mouseInX = details.clientX - elem_left;
+        console.log(mouseInX)
+        console.log(mouseInY)
+        gsap.to(elem.querySelector('img'),{
+            opacity: 1,
+            top : mouseInY,
+            left : mouseInX
+        })
+    })
+    elem.addEventListener('mouseleave',function(){
+        gsap.to(elem.querySelector('img'),{
+            opacity :0,
+        })
+    })
 })

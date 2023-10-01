@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Secular+One&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap);
 
+
+
 .left-nav,
 .photo,
 .section-2,
@@ -274,7 +276,8 @@ html {
 
 .menu li ul a {
     justify-content: center;
-    font-size: 1.3vw
+    font-size: 1.3vw;
+    color: #8c73d4;
 }
 
 .section img {
@@ -658,3 +661,15 @@ html {
     height: 130px;
     background: transparent;
 }
+
+.cursor{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 100%;
+    background-color: #927adb;
+    position: absolute;
+    mix-blend-mode: screen;
+    z-index: 999;
+    transition:  cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+

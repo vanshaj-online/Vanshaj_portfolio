@@ -97,3 +97,8 @@ document.querySelectorAll('.hover').forEach(function(elem){
         })
     })
 })
+
+var cursor = document.querySelector('.cursor')
+window.addEventListener('mousemove',function(dets){
+    cursor.style.transform = `translate(${dets.clientX - 30}px,${dets.clientY - 30}px)`
+})

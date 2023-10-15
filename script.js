@@ -91,3 +91,14 @@ gsap.timeline({
     stagger : .5,
     y : '30%'
 },'eksath')
+
+
+const today = new Date();
+
+const day = today.getDate().toString().padStart(2, '0');
+const month = (today.getMonth() + 1).toString().padStart(2, '0');
+var dd = document.querySelector('#dd');
+var mm = document.querySelector('#mm');
+
+dd.textContent = day;
+mm.textContent = month;

@@ -148,7 +148,7 @@ html {
 
 .skills>h4,
 .svg>div {
-    background: #3b3b3b8c
+    background: #5d20be45
 }
 
 .desk-right-nav a:active {
@@ -438,7 +438,7 @@ html {
     margin: 15vh 0;
     width: 48%;
     border-radius: 0 20px 20px 0;
-    height: 98vh;
+    height: 101.5vh;
 
 }
 
@@ -465,9 +465,9 @@ html {
 
 
 .skills>h4 {
-    width: 61.5%;
+    width: max-content;
     border-radius: 7px;
-    color: #c9c9c9;
+    color: #fff;
     padding: .2vw .8vw;
     height: min-content;
 }
@@ -521,7 +521,7 @@ html {
     position: relative;
     background: #856ad64e;
     overflow: hidden;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .social>span img {
@@ -544,7 +544,6 @@ html {
     width: 100%;
     background: #0000003e;
     padding: 3.7vw;
-    backdrop-filter: blur(40px);
 }
 
 .social div {
@@ -554,15 +553,21 @@ html {
     align-items: center;
 }
 
+.container img{
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+}
+
 .social>h1,
 .social>h1 a {
     font-family: 'gilroy light';
     font-weight: 700;
     color: white;
     text-decoration: none;
-    font-size: 4.5vw;
+    font-size: 4.3vw;
     text-align: left;
-    /* line-height: 8vw; */
+    /* line-height: 1.5; */
     text-transform: capitalize;
 }
 
@@ -616,6 +621,7 @@ html {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: default;
 }
 
 .contain>div:first-child {
@@ -649,7 +655,6 @@ html {
     height: 50vh;
     width: 48vw;
     margin-bottom: .8vh;
-    border-radius: 10px;
     overflow: hidden;
     /* background: white; */
 }
@@ -657,10 +662,18 @@ html {
 .thumbnail img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: inline;
     object-position: left;
     transform: scale(1.01);
+    filter: brightness(80%);
+    -webkit-filter: brightness(80%);
+    transition: .2s all ease;
+}
+
+.thumbnail img:hover{
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
 }
 
 .desc {
@@ -698,6 +711,7 @@ html {
     font-size: calc(3vw / 1.818);
     letter-spacing: -.1px;
     font-weight: 500;
+    cursor: default;
 }
 
 .date {
@@ -735,35 +749,28 @@ html {
 }
 
 .form {
-    /* height: 100%; */
     width: 50%;
-    display: grid;
-    place-content: center;
-    background-color: rgba(0, 0, 0, 0.100);
+    background-color: rgba(7, 6, 6, 0.1);
     border-radius: 20px;
-    background-repeat: no-repeat;
     overflow: hidden;
-    background-size: contain;
-    background-position: center;
 }
 
 form {
-    backdrop-filter: blur(50px);
     height: 70vh;
-    width: 35vw !important;
-    -webkit-backdrop-filter: blur(100px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 1vh;
     justify-content: center;
-    width: 20vw;
 }
 
 form * {
     outline: none;
 }
 
+.all{
+    width: 65%;
+}
 
 .all>* {
     margin: 2vh 0;
@@ -771,13 +778,13 @@ form * {
 
 #contact {
     display: flex;
-    color: #ffffff86;
+    color: #44434386;
     padding: 2vh;
     width: 42%;
 }
 
 
-#contact h2, #contact h2 span {
+#contact>h2, #contact>h2>span {
     font-family: 'gilroy';
     font-weight: 500;
     background: #9D07E8;
@@ -785,7 +792,6 @@ form * {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* text-align: justify; */
     text-transform: capitalize;
     font-size: 3.5vw;
     line-height: 5vw;
@@ -795,7 +801,7 @@ form * {
 .input-box {
     position: relative;
     display: flex;
-    width: auto;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
 }
@@ -863,7 +869,835 @@ footer{
 footer h3{
     font-size: 1.2vw;
     letter-spacing: -1px;
-    font-family: gilroy;
-    font-weight: 500;
+    font-family: 'gilroy light';
+    font-weight: 900;
     color: gray;
+}
+
+
+@media only screen and (min-width:768px ) and (max-width: 1023px) {
+    .cursor{
+        display: none;
+    }
+    
+    .left-nav h3{
+        font-size: 2.5rem;
+    }
+    .desk-right-nav{
+        width: 10vw;
+    }
+    .desk-right-nav a{
+        font-size: 2rem;
+    }
+    .me{
+        height: 35%;
+        width: auto;
+    }
+    .new h3{
+        font-size: 6.5rem;
+        color: #5739b3;
+        -webkit-text-stroke: 0;
+        font-weight: 900;
+    }
+    .title>div:last-child> p{
+        font-size: 2rem;
+    }
+    .date, .banner{
+        display: none;
+    }
+
+    #page{
+        height: 70vh;
+    }
+
+    .about-me{
+        padding: 8vh 5vh;
+    }
+
+    .about-me h2, .about-me h2 span{
+        font-size: 3rem;
+    }
+    .about-me>p{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .photo{
+        height: 100%;
+        padding: 0;
+    }
+    .photo img{
+        height: 50vh;
+        width: 100%;
+    }
+
+    .section-3{
+        height: max-content;
+        position: relative;
+    }
+
+    .social{
+        height: min-content;
+        border-radius: 20px;
+    }
+    
+    .skills{
+        height: inherit;
+        background: none;
+        justify-self: center;
+        padding: 0;
+    }
+
+    .skills>div:first-child>h1{
+        font-size: 5rem;
+    }
+
+    .skills>h4{
+        font-size: 2rem;
+        width: max-content;
+    }
+    
+    .container{
+        display: none;
+    }
+
+    .contain{
+        height: 100%;
+        width: 100%;
+    }
+
+    .project{
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 0;
+        height: 100%;
+    }
+
+    .thumbnail{
+        display: grid;
+        place-content: center;
+        height: fit-content;
+    }
+
+    .thumbnail img{
+        /* display: none; */
+        object-fit: contain;
+        object-position: top;
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+    }
+
+    .desc{
+        width: 60%;
+        height: 35%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .form, form{
+        width: 70vw;
+        background-color: #100520;
+        display: flex;
+        align-items: center;
+    }
+
+    .input-box{
+        width: 100%;
+    }
+
+    .input-box img{
+        height: 3vw;
+    }
+
+    .input{
+        width: 100%;
+        height: 5vh;
+    }
+
+    .input::placeholder{
+        font-size: 2rem;
+    }
+
+    form button{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 640px ) and (max-width: 767px) {
+    .cursor{
+        display: none;
+    }
+    .left-nav h3{
+        font-size: 3rem;
+    }
+    .desk-right-nav{
+        width: 12vw;
+    }
+    .desk-right-nav a{
+        font-size: 2.5rem;
+    }
+    .me{
+        height: 35%;
+        width: auto;
+    }
+    .new h3{
+        font-size: 6.5rem;
+        color: #5739b3;
+        -webkit-text-stroke: 0;
+        font-weight: 900;
+    }
+    .title>div:last-child> p{
+        font-size: 2.5rem;
+    }
+    .date, .banner{
+        display: none;
+    }
+
+    #page{
+        height: 70vh;
+    }
+
+    .about-me h2, .about-me h2 span{
+        font-size: 3.3rem;
+    }
+    .about-me>p>span{
+        font-size: 2.8rem;
+        opacity: 1;
+    }
+    .photo{
+        height: 100%;
+        padding: 0 3vh;
+    }
+    .photo img{
+        height: 50vh;
+        width: 100%;
+    }
+
+    .section-3{
+        height: max-content;
+        position: relative;
+    }
+
+    .social{
+        height: min-content;
+        border-radius: 20px;
+    }
+    
+    .skills{
+        height: inherit;
+        background: none;
+        justify-self: center;
+        padding: 0;
+    }
+
+    .skills>div:first-child>h1{
+        font-size: 5rem;
+    }
+
+    .skills>h4{
+        font-size: 2.3rem;
+        width: max-content;
+    }
+
+    .svg>div{
+        border-radius: 10px;
+    }
+    
+    .container{
+        display: none;
+    }
+
+    .contain{
+        height: 100%;
+        width: 100%;
+    }
+
+    .contain>div:first-child>h1{
+        font-size: 5rem;
+    }
+
+    .project{
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 0;
+        height: 100%;
+    }
+
+    .thumbnail{
+        display: grid;
+        place-content: center;
+        height: fit-content;
+    }
+
+    .thumbnail img{
+        /* display: none; */
+        object-fit: contain;
+        object-position: top;
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+    }
+
+    .desc{
+        width: 60%;
+        height: 35%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .desc>p{
+        font-size: 2.3rem;
+    }
+
+    .form, form{
+        width: 70vw;
+        background-color: #100520;
+        display: flex;
+        align-items: center;
+    }
+
+    .all{
+        width: 80%;
+    }
+
+    .input-box img{
+        height: 3vw;
+    }
+
+    .input{
+        width: 100%;
+        height: 5vh;
+    }
+
+    .input::placeholder, form button{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 521px ) and (max-width: 639px) {
+    .cursor{
+        display: none;
+    }
+
+    .left-nav{
+        width: max-content;
+    }
+
+    .left-nav h3{
+        font-size: 4.5rem;
+    }
+    .desk-right-nav{
+        width: 20%;
+        height: 11vh;
+    }
+    .desk-right-nav a{
+        font-size: 3.6rem;
+    }
+
+    .section{
+        height: 100dvh;
+    }
+
+    .image{
+        height: 80vh;
+    }
+    .me{
+        height: 27vh;
+        width: auto;
+    }
+    .new h3{
+        font-size: 7rem;
+        color: #5739b3;
+        -webkit-text-stroke: 0;
+        font-weight: 900;
+    }
+    .title>div:last-child> p{
+        font-size: 4rem;
+        text-align: center;
+        padding: 1vh;
+        border-right: 2px solid #856ad6;
+        border-left: 2px solid #856ad6;
+    }
+    .date, .banner{
+        display: none;
+    }
+
+    #page{
+        height: 100vh;
+        flex-direction: column-reverse;
+        width: 100vw;
+    }
+
+    .about-me, .photo{
+        border-radius: 0;
+        height: 55dvh;
+    }
+
+    .about-me{
+        width: 100dvw !important;
+        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 3vh;
+    }
+
+
+    .about-me h2, .about-me h2 span{
+        font-size: 7rem;
+        opacity: 1;
+    }
+    
+    .about-me>p>span{
+        font-size: 3.7rem;
+        line-height: 1.3;
+        color: white;
+        opacity: 1;
+    }
+    .photo{
+        width: 100dvw !important;
+        height: 45vh;
+    }
+    .photo img{
+        height: 35vh;
+        border-radius: 100%;
+        width: 35vh;
+    }
+
+    .section-3{
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        margin-top: 8vh;
+    }
+
+    .social{
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+        margin-bottom:5vh;
+    }
+
+    .social>h1, .social>h1>span{
+        font-size: 8rem;
+        text-align: center;
+    }
+
+    #hover{
+        justify-content: center;
+    }
+
+    #hover a{
+        font-size: 7.8rem;
+    }
+    
+    .skills{
+        height: inherit;
+        background: none;
+        padding: 0 1vh;
+        width: 100%;
+        margin: 0;
+    }
+
+    .skills>div:first-child>h1{
+        font-size: 12rem;
+        width: 90%;
+    }
+
+    .svg{
+        width: fit-content;
+    }
+
+    .skills>h4{
+        font-size: 4rem;
+        padding: 3px 2px;
+        width: max-content;
+    }
+
+    .svg>div{
+        border-radius: 10px;
+        height: 16vw;
+        width: 16vw;
+    }
+
+    .svg>div>img{
+        height: 12rem;
+        width: auto;
+    }
+    
+    .container{
+        display: none;
+    }
+
+    .contain{
+        height: 100%;
+        background-color: transparent;
+        border-radius: 0;
+        width: 100%;
+    }
+    
+    .contain>div:first-child>h1{
+        font-size: 9rem;
+    }
+
+    .project{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding-left:1vh;
+        display: flex;
+    }
+
+    .thumbnail{
+        display: grid;
+        place-content: center;
+        height: fit-content;
+        width: fit-content;        
+    }
+
+    .thumbnail img{
+        object-fit: contain;
+        object-position: top;
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+        height: 40vw;
+        width: auto;
+    }
+
+    .desc{
+        width: 100%;
+        height: fit-content;
+        align-items: center;
+        padding: 0;
+        text-align: center;
+    }
+
+    .desc>a>h2{
+        font-size: 6rem;
+    }
+
+    .desc>p{
+        font-size: 3.5rem;
+        line-height: 1.5;
+        width: 100%;
+    }
+
+    .query{
+        flex-direction: column;
+        width: 100vw;
+        margin-left: 0;
+        height: max-content;
+        justify-content: center;
+    }
+
+    .query #contact{
+        width: 60%;
+        padding: 0;
+    }
+
+    .query #contact>h2,.query #contact>h2>span{
+        font-size: 6rem;
+        line-height: 1;
+    }
+
+    .form, form{
+        background-color: transparent;
+        width: 100dvw;
+        height: 50vh;
+    }
+
+    .all{
+        width: 65%;
+    }
+
+    .input-box img{
+        height: 4vh;
+    }
+
+    .input{
+        width: 100%;
+        height: 6vh;
+        font-size: 3rem;
+    }
+
+    .input::placeholder, form button{
+        font-size: 3rem;
+        color: #000;
+    }
+
+    form button{
+        color: white;
+    }
+
+    footer h3{
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-width: 320px ) and (max-width: 520px) {
+    .cursor{
+        display: none;
+    }
+
+    .left-nav{
+        width: 20%;
+    }
+
+    .left-nav h3{
+        font-size: 5.5rem;
+    }
+    .desk-right-nav{
+        width: 23%;
+    }
+    .desk-right-nav a{
+        font-size: 4.3rem;
+    }
+
+    .section{
+        height: 100dvh;
+    }
+
+    .image{
+        height: 80vh;
+    }
+    .me{
+        height: 27vh;
+        width: auto;
+    }
+    .new h3{
+        font-size: 8.5rem;
+        color: #5739b3;
+        -webkit-text-stroke: 0;
+        font-weight: 900;
+    }
+    .title>div:last-child> p{
+        font-size: 4.5rem;
+        text-align: center;
+        padding: 1vh;
+        border-right: 2px solid #856ad6;
+        border-left: 2px solid #856ad6;
+    }
+    .date, .banner{
+        display: none;
+    }
+
+    #page{
+        height: 100vh;
+        flex-direction: column-reverse;
+        width: 100vw;
+    }
+
+    .about-me, .photo{
+        border-radius: 0;
+        height: 55dvh;
+        padding: 3vh;
+    }
+
+    .about-me{
+        width: 100dvw !important;
+        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: min-content;
+        padding: 0 3vh;
+    }
+
+
+    .about-me h2, .about-me h2 span{
+        font-size: 8rem;
+        opacity: 1;
+    }
+    
+    .about-me>p>span{
+        font-size: 4.2rem;
+        line-height: 1.3;
+        color: white;
+        opacity: 1;
+    }
+    .photo{
+        width: 100dvw !important;
+        height: 45vh;
+    }
+    .photo img{
+        height: 35vh;
+        border-radius: 100%;
+        width: 35vh;
+    }
+
+    .section-3{
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        margin-top: 8vh;
+    }
+
+    .social{
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+        margin-bottom:5vh;
+    }
+
+    .social>h1, .social>h1>span{
+        font-size: 10rem;
+        text-align: center;
+    }
+
+    #hover{
+        justify-content: center;
+    }
+
+    #hover a{
+        font-size: 9rem;
+    }
+    
+    .skills{
+        height: inherit;
+        background: none;
+        padding: 0 1vh;
+        width: 100%;
+        margin: 0;
+    }
+
+    .skills>div:first-child>h1{
+        font-size: 12rem;
+        width: 90%;
+    }
+
+    .svg{
+        width: fit-content;
+    }
+
+    .skills>h4{
+        font-size: 5rem;
+        padding: 3px 2px;
+        width: max-content;
+    }
+
+    .svg>div{
+        border-radius: 10px;
+        height: 16vw;
+        width: 16vw;
+    }
+
+    .svg>div>img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .container{
+        display: none;
+    }
+
+    .contain{
+        height: 100%;
+        background-color: transparent;
+        border-radius: 0;
+        width: 100%;
+    }
+    
+    .contain>div:first-child>h1{
+        font-size: 13rem;
+    }
+
+    .project{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding-left:1vh;
+        display: flex;
+    }
+
+    .thumbnail{
+        display: grid;
+        place-content: center;
+        height: fit-content;
+        width: fit-content;        
+    }
+
+    .thumbnail img{
+        object-fit: contain;
+        object-position: top;
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+        height: 23vh;
+        width: auto;
+    }
+
+    .desc{
+        width: 100%;
+        height: fit-content;
+        align-items: center;
+        padding: 0;
+        text-align: center;
+    }
+
+    .desc>a>h2{
+        font-size: 8rem;
+    }
+
+    .desc>p{
+        font-size: 5rem;
+        line-height: 1.5;
+        width: 100%;
+    }
+
+    .query{
+        flex-direction: column;
+        width: 100vw;
+        margin-left: 0;
+        height: max-content;
+        justify-content: center;
+    }
+
+    .query #contact{
+        width: 80%;
+        padding: 0;
+    }
+
+    .query #contact>h2,.query #contact>h2>span{
+        font-size: 8rem;
+        line-height: 1;
+    }
+
+    .form, form{
+        background-color: transparent;
+        width: 100dvw;
+        height: 50vh;
+    }
+
+    .all{
+        width: 65%;
+    }
+
+    .input-box img{
+        height: 4vh;
+    }
+
+    .input{
+        width: 100%;
+        height: 6vh;
+        font-size: 5.5rem;
+    }
+
+    .input::placeholder, form button{
+        font-size: 4rem;
+        color: #000;
+    }
+
+    textarea{
+        /* resize:auto; */
+        /* height: fit-content; */
+        width: inherit !important;
+    }
+
+    form button{
+        color: white;
+    }
+
+    footer h3{
+        font-size: 3rem;
+    }
 }

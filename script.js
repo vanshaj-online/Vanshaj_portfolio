@@ -79,3 +79,5 @@ var mm = document.querySelector('#mm');
 dd.textContent = day;
 mm.textContent = month;    
 }
+
+console.log('git')

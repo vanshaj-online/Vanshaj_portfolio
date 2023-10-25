@@ -1,0 +1,593 @@
+@font-face {
+    font-family: cocogoose;
+    src: url(assets/Cocogoose\ Pro-trial.ttf);
+}
+@font-face {
+    font-family: 'cocogoose light';
+    src: url(assets/Cocogoose\ Pro\ Ultralight-trial.ttf);
+}
+@font-face {
+    font-family: couture;
+    src: url(assets/couture-bld.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+
+*::selection{
+    color: whitesmoke;
+    background-color: #333;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+/* nav starts */
+
+header, nav{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header nav>div{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid blue; */
+    align-items: center;
+}
+
+
+.right-nav, .logo{
+    width: 25%;
+    justify-content: center;
+}
+
+.logo{
+    width: 10%;
+}
+
+.logo img{
+    height: 7rem;
+    width: auto;
+}
+
+.center-nav{
+    width: 30%;
+}
+
+.center-nav li{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.center-nav li ul:last-child{
+    position: relative;
+    text-transform: capitalize;
+}
+
+.center-nav li ul:last-child a::before{
+    position: absolute;
+    content: 'new';
+    top: -3vh;
+    background-color: rgb(255, 107, 53);
+    color: white;
+    font-size: .8rem;
+    border-radius: 8px;
+    text-transform: lowercase;
+    padding: .5vh;
+    left: 100%;
+}
+
+.center-nav li ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: .1s;
+    letter-spacing: -0.1px;
+}
+
+.center-nav li ul a:hover{
+    color: #639fa5;
+}
+
+.right-nav input, .right-nav button{
+    outline: none;
+    border: none;
+    padding: 0 2vh;
+    height: 6vh;
+    border-radius: 7px 0 0 7px;
+    width: 60%;
+    box-shadow: 0px 0px 8px -1px rgba(186, 185, 185, 0.398);
+    font-weight: 500;
+}
+
+.right-nav button{
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
+    width: 6vh;
+    padding: 0;
+    background-color: rgb(212, 211, 211);
+}
+
+.right-nav button img{
+    height: 3vh;
+    width: 3vh;
+}
+
+.cart{
+    width: 8%;
+    justify-content: space-between;
+}
+
+.cart a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 650;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.cart a img{
+    height: 4vh;
+    width: 4vh;
+}
+
+/* nav ends */
+
+/* hero section starts */
+
+main{
+    width: 100%;
+}
+
+.hero{
+    height: 88vh;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin: 0 5%;
+    margin-bottom: 5vh;
+}
+
+#text, #image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+#text{
+    width: 50%;
+    padding-left: 3vh;
+    text-transform: capitalize;
+}
+
+#text>*{
+    margin: 1vh 0;
+}
+
+#text h3{
+    font-size: 2rem;
+    letter-spacing: -0.1px;
+    font-family: "cocogoose light";
+    font-weight: 900;
+    color: grey;
+}
+
+#text h1{
+    font-size: 5rem;
+    width: 100%;
+    /* color: rgb(34, 34, 34); */
+    color: #639fa5;
+    font-family: couture;
+    letter-spacing: -2px;
+}
+
+#text h4{
+    width: 80%;
+    font-family: "cocogoose light";
+    font-weight: 900;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-left: 4px solid grey;
+    padding-left: 1vh;
+    color: #333;
+}
+
+
+
+#text a{
+    height: 6vh;
+    width: fit-content;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 1vh;
+    margin-top: 2vh;
+    background-color: #639fa5;
+    color: whitesmoke;
+    transition: .2s;
+}
+
+#text a:hover{
+    background-color: #3b757a;
+}
+
+#image{
+    position: relative;
+}
+
+#image h2{
+    position: absolute;
+    z-index: 2;
+    padding: 2vh;
+    top: 20vh;
+    left: 2vh;
+    font-size: 2rem;
+    color:skyblue;
+    text-transform: capitalize;
+    background-color: rgba(255, 255, 255, 0.447);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+#image img{
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+#image #two{
+    height: 25rem;
+    width: 25rem;
+    right: 1vh;
+    top: 1vh;
+    border-radius: 20px;
+}
+#image #one{
+    height: auto;
+    width: 15rem;
+    left: 1vh;
+    border-radius: 20px;
+}
+#image #five{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 30px;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: 1vh;
+    z-index: 1;
+}
+
+.section-2{
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 4vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28vh;
+    border-radius: 20px;
+    width: 70%;
+    padding: 1vh 0;
+    background-color: rgba(220, 220, 220, 0.592);
+    margin-bottom: 3vh;
+}
+
+.top div{
+    width: 25%;
+    border-right: 2px solid whitesmoke;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.top>div:last-child{
+    border: none;
+}
+
+.top div span{
+    color: #333;
+    font-weight: 600;
+}
+
+.top>div>img{
+    height: 5rem;
+    margin-bottom: 1vh;
+}
+
+.hero-2{
+    width: 100%;
+}
+
+.hero-2>div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    margin-bottom: 3vh;
+    color: #639fa5;
+}
+
+.hero-2 div h1{
+    margin-bottom: 1vh;
+    font-size: 2.5rem;
+}
+
+.hero-2 div h3{
+    font-size: 1.3rem;
+}
+
+.featured{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+}
+
+.featured > div{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vh 0;
+    background-color: whitesmoke;
+    height: 30vh;
+    border-radius: 5px;
+    transition: .1s;
+}
+
+.featured > div h3{
+    text-transform: uppercase;
+    color: #333;
+}
+
+.featured > div > div{
+    height: 70%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.featured div a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured div a #adidas{
+    height: 10rem;
+    object-fit: cover;
+    object-position: center;
+}
+.featured div a #asics{
+    height: 3rem;
+    object-fit: cover;
+    object-position: center;
+}
+.featured div a #puma{
+    height: 10rem;
+}
+.featured div a #campus{
+    height: 1.5rem;
+}
+.featured div a #nike{
+    height: 8rem;
+    mix-blend-mode: darken;
+}
+
+.featured > div:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+.feat{
+    height: 40vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feat .model{
+    width: 22%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.feat .model img{
+    height: 100%;
+}
+
+.feat .products{
+    width: 78%;
+    height: 100%;
+    background-color: #09021b;
+    padding: 2vh 0;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.products>div{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.products span{
+    height: 5rem;
+    width: 1px;
+    background-color: rgb(80, 79, 79);
+}
+
+.products>div>div{
+    position: relative;
+    height: 45%;
+    border-radius: 20px;
+    width: 40%;
+    background-position: center;
+    background-size: fill;
+}
+
+.products>div>h3{
+    color: rgb(213, 211, 211);
+    font-family: gilroy;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+.products>div>div img{
+    height: 9rem;
+    width: 9rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    object-fit: contain;
+}
+
+
+.products div #shirt{
+    background: linear-gradient(-140deg, rgb(109, 109, 225) 40%,rgb(64, 188, 245) 80%);
+    
+}
+.products div #goggles{
+    background: linear-gradient(-140deg, rgb(123, 255, 229) 40%,rgb(180, 180, 180) 80%);
+}
+.products div #tshirt{
+    background: linear-gradient(-140deg, rgb(247, 96, 242) 40%,rgb(118, 44, 255) 80%);
+}
+.products div #hoodie{
+    background: linear-gradient(-140deg, rgb(77, 41, 255) 40%,rgb(164, 64, 245) 80%);
+}
+
+.products>div> a{
+    text-decoration: none;
+    font-family: "cocogoose light";
+    font-family: montserrat;
+    color: rgb(170, 169, 169);
+    color: rgb(7, 3, 34);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    transition: .2s;
+    background-color: rgb(255, 255, 65);
+    padding: .8vh;
+    border-radius: 5px;
+}
+
+.section-3{
+    width: 100%;
+}
+
+.category{
+    padding: 1vh 0 0 0  ;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category h1{
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-family: couture;
+    height: 8vh;
+    font-weight: 900;
+    color: #333;
+}
+
+.items{
+    height: calc(100vh - 9vh);
+    width: 80%;
+    /* padding: 0 2vh; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item{
+    width: 21%;
+    height: 38vh;
+    background-color: #3b757a;
+}
+
+.item a{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+.item a h3{
+    position: absolute;
+    text-align: center;
+    bottom: 1vh;
+    width: 100%;
+    left: 50%;
+    transform: translatex(-50%);
+    font-family: 'cocogoose light';
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.item a h3 span{
+    font-family: 'cocogoose light';
+    font-size: 1rem;
+}
+
+.item a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}

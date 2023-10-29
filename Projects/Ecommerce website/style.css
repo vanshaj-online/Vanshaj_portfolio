@@ -1,37 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
 @font-face {
     font-family: cocogoose;
     src: url(assets/Cocogoose\ Pro-trial.ttf);
 }
+
 @font-face {
     font-family: 'cocogoose light';
     src: url(assets/Cocogoose\ Pro\ Ultralight-trial.ttf);
 }
+
 @font-face {
     font-family: couture;
     src: url(assets/couture-bld.otf);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: montserrat, sans-serif;
 }
 
-*::selection{
+*::selection {
     color: whitesmoke;
-    background-color: #333;
+    background-color: #639fa5;
 }
 
-html,body{
+html,
+body {
     height: 100%;
     width: 100%;
     background-color: white;
 }
 
+img{
+    -webkit-user-drag: none;
+}
+
 /* nav starts */
 
-header, nav{
+header,
+nav {
     height: 12vh;
     width: 100%;
     display: flex;
@@ -39,7 +50,7 @@ header, nav{
     justify-content: space-evenly;
 }
 
-header nav>div{
+header nav>div {
     height: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -48,25 +59,26 @@ header nav>div{
 }
 
 
-.right-nav, .logo{
+.right-nav,
+.logo {
     width: 25%;
     justify-content: center;
 }
 
-.logo{
+.logo {
     width: 10%;
 }
 
-.logo img{
+.logo img {
     height: 7rem;
     width: auto;
 }
 
-.center-nav{
+.center-nav {
     width: 30%;
 }
 
-.center-nav li{
+.center-nav li {
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -74,38 +86,39 @@ header nav>div{
     text-transform: capitalize;
 }
 
-.center-nav li ul:last-child{
+.center-nav li ul:last-child {
     position: relative;
     text-transform: capitalize;
 }
 
-.center-nav li ul:last-child a::before{
+.center-nav li ul:last-child a::before {
     position: absolute;
     content: 'new';
-    top: -3vh;
-    background-color: rgb(255, 107, 53);
-    color: white;
-    font-size: .8rem;
+    top: -1.5vh;
+    color: orangered;
+    font-weight: 100;
+    font-size: .6rem;
     border-radius: 8px;
-    text-transform: lowercase;
+    text-transform: capitalize;
     padding: .5vh;
     left: 100%;
 }
 
-.center-nav li ul a{
+.center-nav li ul a {
     text-decoration: none;
     color: black;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 1rem;
     transition: .1s;
     letter-spacing: -0.1px;
 }
 
-.center-nav li ul a:hover{
+.center-nav li ul a:hover {
     color: #639fa5;
 }
 
-.right-nav input, .right-nav button{
+.right-nav input,
+.right-nav button {
     outline: none;
     border: none;
     padding: 0 2vh;
@@ -116,7 +129,7 @@ header nav>div{
     font-weight: 500;
 }
 
-.right-nav button{
+.right-nav button {
     border-radius: 0 7px 7px 0;
     cursor: pointer;
     width: 6vh;
@@ -124,17 +137,17 @@ header nav>div{
     background-color: rgb(212, 211, 211);
 }
 
-.right-nav button img{
+.right-nav button img {
     height: 3vh;
     width: 3vh;
 }
 
-.cart{
+.cart {
     width: 8%;
     justify-content: space-between;
 }
 
-.cart a{
+.cart a {
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -146,7 +159,7 @@ header nav>div{
     color: #000;
 }
 
-.cart a img{
+.cart a img {
     height: 4vh;
     width: 4vh;
 }
@@ -155,11 +168,12 @@ header nav>div{
 
 /* hero section starts */
 
-main{
+main {
     width: 100%;
+    margin-bottom: 10vh;
 }
 
-.hero{
+.hero {
     height: 88vh;
     display: flex;
     width: 90%;
@@ -168,7 +182,8 @@ main{
     margin-bottom: 5vh;
 }
 
-#text, #image{
+#text,
+#image {
     width: 50%;
     height: 100%;
     display: flex;
@@ -176,17 +191,18 @@ main{
     flex-direction: column;
     justify-content: center;
 }
-#text{
+
+#text {
     width: 50%;
     padding-left: 3vh;
     text-transform: capitalize;
 }
 
-#text>*{
+#text>* {
     margin: 1vh 0;
 }
 
-#text h3{
+#text h3 {
     font-size: 2rem;
     letter-spacing: -0.1px;
     font-family: "cocogoose light";
@@ -194,7 +210,7 @@ main{
     color: grey;
 }
 
-#text h1{
+#text h1 {
     font-size: 5rem;
     width: 100%;
     /* color: rgb(34, 34, 34); */
@@ -203,7 +219,7 @@ main{
     letter-spacing: -2px;
 }
 
-#text h4{
+#text h4 {
     width: 80%;
     font-family: "cocogoose light";
     font-weight: 900;
@@ -216,7 +232,7 @@ main{
 
 
 
-#text a{
+#text a {
     height: 6vh;
     width: fit-content;
     border-radius: 5px;
@@ -230,22 +246,22 @@ main{
     transition: .2s;
 }
 
-#text a:hover{
+#text a:hover {
     background-color: #3b757a;
 }
 
-#image{
+#image {
     position: relative;
 }
 
-#image h2{
+#image h2 {
     position: absolute;
     z-index: 2;
     padding: 2vh;
     top: 20vh;
     left: 2vh;
     font-size: 2rem;
-    color:skyblue;
+    color: skyblue;
     text-transform: capitalize;
     background-color: rgba(255, 255, 255, 0.447);
     backdrop-filter: blur(5px);
@@ -253,7 +269,7 @@ main{
     border-radius: 10px;
 }
 
-#image img{
+#image img {
     height: 5rem;
     width: 5rem;
     object-fit: cover;
@@ -261,20 +277,22 @@ main{
     position: absolute;
 }
 
-#image #two{
+#image #two {
     height: 25rem;
     width: 25rem;
     right: 1vh;
     top: 1vh;
     border-radius: 20px;
 }
-#image #one{
+
+#image #one {
     height: auto;
     width: 15rem;
     left: 1vh;
     border-radius: 20px;
 }
-#image #five{
+
+#image #five {
     height: 15rem;
     width: 15rem;
     border-radius: 30px;
@@ -284,7 +302,7 @@ main{
     z-index: 1;
 }
 
-.section-2{
+.section-2 {
     min-height: 100vh;
     width: 100%;
     padding-top: 4vh;
@@ -294,7 +312,7 @@ main{
     flex-direction: column;
 }
 
-.top{
+.top {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,7 +324,7 @@ main{
     margin-bottom: 3vh;
 }
 
-.top div{
+.top div {
     width: 25%;
     border-right: 2px solid whitesmoke;
     height: 100%;
@@ -315,25 +333,26 @@ main{
     flex-direction: column;
     align-items: center;
 }
-.top>div:last-child{
+
+.top>div:last-child {
     border: none;
 }
 
-.top div span{
+.top div span {
     color: #333;
     font-weight: 600;
 }
 
-.top>div>img{
+.top>div>img {
     height: 5rem;
     margin-bottom: 1vh;
 }
 
-.hero-2{
+.hero-2 {
     width: 100%;
 }
 
-.hero-2>div:first-child{
+.hero-2>div:first-child {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -343,16 +362,16 @@ main{
     color: #639fa5;
 }
 
-.hero-2 div h1{
+.hero-2 div h1 {
     margin-bottom: 1vh;
     font-size: 2.5rem;
 }
 
-.hero-2 div h3{
+.hero-2 div h3 {
     font-size: 1.3rem;
 }
 
-.featured{
+.featured {
     height: 40vh;
     width: 100%;
     display: flex;
@@ -360,7 +379,7 @@ main{
     margin-top: 5vh;
 }
 
-.featured > div{
+.featured>div {
     width: 15%;
     display: flex;
     justify-content: center;
@@ -373,12 +392,12 @@ main{
     transition: .1s;
 }
 
-.featured > div h3{
+.featured>div h3 {
     text-transform: uppercase;
     color: #333;
 }
 
-.featured > div > div{
+.featured>div>div {
     height: 70%;
     width: 90%;
     display: flex;
@@ -387,39 +406,43 @@ main{
     overflow: hidden;
 }
 
-.featured div a{
+.featured div a {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.featured div a #adidas{
+.featured div a #adidas {
     height: 10rem;
     object-fit: cover;
     object-position: center;
 }
-.featured div a #asics{
+
+.featured div a #asics {
     height: 3rem;
     object-fit: cover;
     object-position: center;
 }
-.featured div a #puma{
+
+.featured div a #puma {
     height: 10rem;
 }
-.featured div a #campus{
+
+.featured div a #campus {
     height: 1.5rem;
 }
-.featured div a #nike{
+
+.featured div a #nike {
     height: 8rem;
     mix-blend-mode: darken;
 }
 
-.featured > div:hover{
+.featured>div:hover {
     background-color: rgb(236, 236, 236);
 }
 
-.feat{
+.feat {
     height: 40vh;
     display: flex;
     width: 100%;
@@ -427,7 +450,7 @@ main{
     align-items: center;
 }
 
-.feat .model{
+.feat .model {
     width: 22%;
     height: 100%;
     display: flex;
@@ -436,11 +459,11 @@ main{
     text-transform: uppercase;
 }
 
-.feat .model img{
+.feat .model img {
     height: 100%;
 }
 
-.feat .products{
+.feat .products {
     width: 78%;
     height: 100%;
     background-color: #09021b;
@@ -452,7 +475,7 @@ main{
     overflow: hidden;
 }
 
-.products>div{
+.products>div {
     width: 25%;
     height: 100%;
     display: flex;
@@ -461,13 +484,13 @@ main{
     flex-direction: column;
 }
 
-.products span{
+.products span {
     height: 5rem;
     width: 1px;
     background-color: rgb(80, 79, 79);
 }
 
-.products>div>div{
+.products>div>div {
     position: relative;
     height: 45%;
     border-radius: 20px;
@@ -476,42 +499,44 @@ main{
     background-size: fill;
 }
 
-.products>div>h3{
+.products>div>h3 {
     color: rgb(213, 211, 211);
     font-family: gilroy;
     font-weight: 100;
     text-transform: capitalize;
 }
 
-.products>div>div img{
+.products>div>div img {
     height: 9rem;
     width: 9rem;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     position: absolute;
     object-fit: contain;
 }
 
 
-.products div #shirt{
-    background: linear-gradient(-140deg, rgb(109, 109, 225) 40%,rgb(64, 188, 245) 80%);
-    
-}
-.products div #goggles{
-    background: linear-gradient(-140deg, rgb(123, 255, 229) 40%,rgb(180, 180, 180) 80%);
-}
-.products div #tshirt{
-    background: linear-gradient(-140deg, rgb(247, 96, 242) 40%,rgb(118, 44, 255) 80%);
-}
-.products div #hoodie{
-    background: linear-gradient(-140deg, rgb(77, 41, 255) 40%,rgb(164, 64, 245) 80%);
+.products div #shirt {
+    background: linear-gradient(-140deg, rgb(109, 109, 225) 40%, rgb(64, 188, 245) 80%);
+
 }
 
-.products>div> a{
+.products div #goggles {
+    background: linear-gradient(-140deg, rgb(123, 255, 229) 40%, rgb(180, 180, 180) 80%);
+}
+
+.products div #tshirt {
+    background: linear-gradient(-140deg, rgb(247, 96, 242) 40%, rgb(118, 44, 255) 80%);
+}
+
+.products div #hoodie {
+    background: linear-gradient(-140deg, rgb(77, 41, 255) 40%, rgb(164, 64, 245) 80%);
+}
+
+.products>div>a {
     text-decoration: none;
-    font-family: "cocogoose light";
-    font-family: montserrat;
+    font-family: montserrat, sans-serif;
     color: rgb(170, 169, 169);
     color: rgb(7, 3, 34);
     font-weight: 700;
@@ -523,12 +548,12 @@ main{
     border-radius: 5px;
 }
 
-.section-3{
+.section-3 {
     width: 100%;
 }
 
-.category{
-    padding: 1vh 0 0 0  ;
+.category {
+    padding: 1vh 0 0 0;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -536,7 +561,7 @@ main{
     align-items: center;
 }
 
-.category h1{
+.category h1 {
     text-transform: capitalize;
     font-size: 3rem;
     font-family: couture;
@@ -545,7 +570,7 @@ main{
     color: #333;
 }
 
-.items{
+.items {
     height: calc(100vh - 9vh);
     width: 80%;
     /* padding: 0 2vh; */
@@ -555,39 +580,184 @@ main{
     justify-content: space-between;
 }
 
-.item{
+.item {
     width: 21%;
     height: 38vh;
     background-color: #3b757a;
-}
-
-.item a{
-    height: 100%;
-    width: 100%;
     position: relative;
-    color: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.item a h3{
+.item a {
+    height: 38vh;
+    width: initial;
+    color: white;
+    display: flex;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(.9);
+    transition: .1s;
+}
+
+.item a:hover {
+    filter: brightness(1);
+
+}
+
+.item a h3 {
     position: absolute;
     text-align: center;
-    bottom: 1vh;
+    bottom: 0;
+    padding: 1vh;
     width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.365) 40%, transparent);
     left: 50%;
     transform: translatex(-50%);
     font-family: 'cocogoose light';
     text-transform: capitalize;
     font-weight: 800;
+    letter-spacing: 1.5px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 1.05rem;
+    z-index: 2;
 }
 
-.item a h3 span{
+.item a h3 span {
     font-family: 'cocogoose light';
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
-.item a img{
+.item a img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center;
+}
+
+footer {
+    height: max-content;
+    padding: 4vh 7vw;
+    width: 100%;
+    background-color: rgb(243, 241, 241);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+footer *{
+    font-family: montserrat, sans-serif;
+}
+
+.online-shop, .policy {
+    min-height: 80%;
+    width: fit-content;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+footer>div>div{
+    margin-bottom: 1.5vh;
+}
+
+footer>div>div a {
+    text-decoration: none;
+    font-size: .95rem;
+    color: #858585;
+    -webkit-font-smoothing: antialiased;
+    text-transform: capitalize;
+}
+
+footer>div> div:first-child a,footer>div> div:first-child h6,footer>div> div:first-child {
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    font-size: .9rem;
+    color: #222;
+    letter-spacing: -0.2px;
+}
+footer>div> div:first-child{
+    margin-bottom: 2vh;
+}
+
+.playstore, .original{
+    width: 25%;
+    min-height: 20vh;
+}
+#appstore a img{
+    width: 9vw;
+}
+.playstore div{
+    display: inline-block;
+    font-weight: bold;
+}
+#playstore a img{
+    width: 10vw;
+}
+
+.original>div img{
+    height: 3rem;
+    margin-right: 1vh;
+}
+
+#return img{
+    margin-right: 1vh;
+    height: 3.3rem;
+}
+
+.original div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#original h6, #return h6{
+    color: #222;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+#original h6 span, #return h6 span{
+    text-transform: lowercase;
+    color: #858585;
+    font-weight: 100;
+}
+
+.social{
+    width: 70%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social h4{
+    padding: 0 .6vh;
+    font-size: .9rem;
+}
+
+.social div:last-child{
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.social div:last-child a{
+    width: fit-content;
+    height: 100%;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: .5vh;
+}
+
+.social div:last-child a img{
+    height: 1.6rem;
+    object-fit: contain;
     object-position: center;
 }

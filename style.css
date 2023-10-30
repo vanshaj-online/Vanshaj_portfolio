@@ -26,10 +26,6 @@
     place-content: center
 }
 
-.desk-right-nav a{
-    font-family: cabin;
-    text-decoration: none
-}
 
 .new>h3:hover,
 .title>p:hover {
@@ -123,6 +119,8 @@ html {
     height: 60%;
     width: 90%;
     border: none;
+    font-family: cabin;
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +128,7 @@ html {
     border-radius: 10px;
     background: #8c73d4;
     color: white;
-    transition: .3s;
+    /* transition: .1s; */
 }
 
 .desk-right-nav a:hover {
@@ -147,9 +145,6 @@ html {
     background: #5d20be45
 }
 
-.desk-right-nav a:active {
-    transform: scale(.9)
-}
 
 .about,
 .add img,
@@ -567,9 +562,10 @@ html {
 }
 
 .social>h1 a {
-    font-family: sign;
+    font-family: 'gilroy light';
     text-transform: lowercase;
     font-weight: 500;
+    margin: 3.5vh 0;
     font-size: 5vw;
     position: relative;
     background: transparent;
@@ -588,11 +584,18 @@ html {
     height: 100vh;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+}
+
+#projects{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 2vh 0;
+    flex-wrap: wrap;
 }
 
 .contain {
-    height: 95vh;
+    min-height: 95vh;
     width: 95%;
     display: flex;
     justify-content: start;
@@ -605,7 +608,6 @@ html {
 
 .contain * {
     background-color: transparent;
-    /* border: 1px solid white; */
 }
 
 .contain>div h1 {
@@ -637,18 +639,18 @@ html {
 }
 
 .project {
-    height: 60vh;
-    width: 100vw;
-    padding: 2vh;
-    border-radius: 15px;
+    height: max-content;
+    width: 40vw;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
 }
 
 
 .thumbnail {
-    height: 50vh;
-    width: 48vw;
+    height: max-content;
+    width: 100%;
     margin-bottom: .8vh;
     overflow: hidden;
 }
@@ -660,9 +662,9 @@ html {
     display: inline;
     object-position: right;
     transform: scale(1.01);
-    filter: brightness(80%);
-    -webkit-filter: brightness(80%);
-    transition: .2s all ease;
+    filter: brightness(.9) blur(1px);
+    -webkit-filter: brightness(.9) blur(1px);
+    transition: .3s;
 }
 
 .thumbnail img:hover{
@@ -671,41 +673,28 @@ html {
 }
 
 .desc {
-    border-radius: 10px;
     display: flex;
     align-items: start;
-    justify-content: center;
     flex-direction: column;
-    padding: 5vh;
-    height: 50vh;
+    height: max-content;
     text-align: left;
-    width: 40vw;
+    width: 100%;
 }
 
-
-.desc>a {
-    text-decoration: none;
+.desc>a>h2, .desc a{
     white-space: nowrap;
-    /* padding: 0 15%; */
-}
-
-.desc>a>h2{
-    color: whitesmoke;
-    font-family: 'andika';
+    color: rgb(207, 207, 207);
+    text-decoration: none;
+    font-family: 'gilroy light';
     letter-spacing: 0.5px;
     font-weight: 900;
-    font-size: 3.5vw;
+    font-size: 2rem;
     position: relative;
+    transition: .2s;
 }
 
-.desc>p{
-    color: whitesmoke;
-    font-family: gilroy;
-    line-height: 3vw;
-    font-size: calc(3vw / 1.818);
-    letter-spacing: -.1px;
-    font-weight: 500;
-    cursor: default;
+.desc a h2:hover{
+    color: white;
 }
 
 .date {

@@ -1,0 +1,180 @@
+ <div class="category">
+                <div class="shop"><h1>shop by category</h1></div>
+                <div class="shop-card">
+                    <div class="item">
+                        <div class="photo"></div>
+                        <div class="title-price">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                        <div class="buy-cart">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="item">
+                        <div class="photo"></div>
+                        <div class="title-price">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                        <div class="buy-cart">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="item">
+                        <div class="photo"></div>
+                        <div class="title-price">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                        <div class="buy-cart">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="item">
+                        <div class="photo"></div>
+                        <div class="title-price">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                        <div class="buy-cart">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="item">
+                        <div class="photo"></div>
+                        <div class="title-price">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                        <div class="buy-cart">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="item">
+                        <div class="photo"></div>
+                        <div class="title-price">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                        <div class="buy-cart">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="item">
+                        <div class="photo"></div>
+                        <div class="title-price">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                        <div class="buy-cart">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <div class="item">
+                        <div class="photo"></div>
+                        <div class="title-price">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                        <div class="buy-cart">
+                            <span>item-price</span>
+                            <span>item-price</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            
+.category{
+    width: 90%;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.shop{
+    width: 100%;
+    margin-bottom: 1vh;
+}
+
+.shop-card{
+    height: 40vh;
+    width: 21%;
+    border: #000 1px solid ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+    background-color: salmon;
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display:flex;
+}
+.photo{
+    width: 90%;
+    height: 70%;
+    display: inline;
+    background-color: yellow;
+}
+.title-price{
+    height: max-content;
+    width: 90%;
+    border: 1px solid gold;
+    justify-content: space-between;
+    display: flex;
+}
+.title-price>span{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: montserrat, Courier, monospace;
+}
+
+.buy-cart{
+    height: max-content;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid green;
+}
+.buy-cart>span{
+    background-color: black;   
+    color: white;
+    font-size: 1.1rem;
+}

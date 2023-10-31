@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: montserrat, sans-serif;
+    font-family: 'gilroy light', sans-serif;
 }
 
 *::selection {
@@ -32,11 +32,16 @@ nav {
     justify-content: space-evenly;
 }
 
+nav{
+    position: fixed;
+    background-color: white;
+    z-index: 9;
+}
+
 header nav>div {
     height: 100%;
     display: flex;
     justify-content: space-evenly;
-    /* border: 1px solid blue; */
     align-items: center;
 }
 
@@ -147,3 +152,89 @@ header nav>div {
 }
 
 /* nav ends */
+
+main,#main{
+    width: 100%;
+}
+
+#main{
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.deals{
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.heading{
+    white-space: nowrap;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 5vh;
+    display: flex;    
+}
+
+.heading h1{
+    text-transform: capitalize;
+    font-family: couture,sans-serif ;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 100%;
+    color: rgb(135, 135, 135);
+    letter-spacing: 1px;
+}
+
+.product{
+    height: 60vh;
+    width: 23%;
+    border-radius: 5px;
+    background-color: rgb(246, 246, 255);
+    margin-bottom: 5vh;
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+.product a{
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.product:hover{
+    box-shadow: 0 0 12px -6px rgba(122, 122, 122);
+}
+.product a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.carousel{
+    width: max-content;
+    height: 45vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.carousel a{
+    width: 100vw;
+    height: 100%;
+}
+.carousel a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}

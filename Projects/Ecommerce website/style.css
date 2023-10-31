@@ -48,16 +48,19 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    z-index: 9;
 }
 
 header nav>div {
     height: 100%;
     display: flex;
     justify-content: space-evenly;
-    /* border: 1px solid blue; */
     align-items: center;
 }
-
+nav{
+    position: fixed;
+    background-color: white;
+}
 
 .right-nav,
 .logo {
@@ -178,8 +181,7 @@ main {
     display: flex;
     width: 90%;
     justify-content: center;
-    margin: 0 5%;
-    margin-bottom: 5vh;
+    margin: 0 5% 5vh 5%;
 }
 
 #text,

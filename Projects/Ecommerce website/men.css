@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+}
+
+*::selection {
+    color: whitesmoke;
+    background-color: #639fa5;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+img{
+    -webkit-user-drag: none;
+}
+
+/* nav starts */
+
+header,
+nav {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header nav>div {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid blue; */
+    align-items: center;
+}
+
+
+.right-nav,
+.logo {
+    width: 25%;
+    justify-content: center;
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo img {
+    height: 7rem;
+    width: auto;
+}
+
+.center-nav {
+    width: 30%;
+}
+
+.center-nav li {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.center-nav li ul:last-child {
+    position: relative;
+    text-transform: capitalize;
+}
+
+.center-nav li ul:last-child a::before {
+    position: absolute;
+    content: 'new';
+    top: -1.5vh;
+    color: orangered;
+    font-weight: 100;
+    font-size: .6rem;
+    border-radius: 8px;
+    text-transform: capitalize;
+    padding: .5vh;
+    left: 100%;
+}
+
+.center-nav li ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 1rem;
+    transition: .1s;
+    letter-spacing: -0.1px;
+}
+
+.center-nav li ul a:hover {
+    color: #639fa5;
+}
+
+.right-nav input,
+.right-nav button {
+    outline: none;
+    border: none;
+    padding: 0 2vh;
+    height: 6vh;
+    border-radius: 7px 0 0 7px;
+    width: 60%;
+    box-shadow: 0px 0px 8px -1px rgba(186, 185, 185, 0.398);
+    font-weight: 500;
+}
+
+.right-nav button {
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
+    width: 6vh;
+    padding: 0;
+    background-color: rgb(212, 211, 211);
+}
+
+.right-nav button img {
+    height: 3vh;
+    width: 3vh;
+}
+
+.cart {
+    width: 8%;
+    justify-content: space-between;
+}
+
+.cart a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 650;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.cart a img {
+    height: 4vh;
+    width: 4vh;
+}
+
+/* nav ends */

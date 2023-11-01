@@ -30,13 +30,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: montserrat, sans-serif;
+    font-family: gilroy-light, sans-serif;
     font-size: 10px;
 }
 
 *::selection {
     color: whitesmoke;
     background-color: #639fa5;
+}
+
+*:focus{
+    outline: none;
+    border: 2px solid #8888;
 }
 
 html,
@@ -178,14 +183,15 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
-    font-weight: 650;
+    font-size: 1vw;
+    font-weight: 600;
     text-transform: capitalize;
     color: #000;
 }
 
 .cart a img {
-    height: 2vw;
+    height: 1.7vw;
+    color: rgb(152, 152, 152);
 }
 
 /* nav ends */
@@ -399,6 +405,7 @@ main {
     text-transform: uppercase;
     color: #333;
     font-size: 1.3vw;
+    font-weight: 900;
 }
 
 .featured>div>div {
@@ -496,9 +503,9 @@ main {
 
 .products>div>div {
     position: relative;
-    height: 45%;
+    height: 7vw;
     border-radius: 20px;
-    width: 40%;
+    width: 7vw;
     background-position: center;
     background-size: fill;
 }
@@ -513,15 +520,17 @@ main {
 }
 
 .products>div>div img {
-    height: 9rem;
-    width: 9rem;
+    height: 11vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
     object-fit: contain;
 }
-
+#hoodie img{
+    height: 13vw;
+    top: 45%;
+}
 
 .products div #shirt {
     background: linear-gradient(-140deg, rgb(109, 109, 225) 40%, rgb(64, 188, 245) 80%);
@@ -546,7 +555,7 @@ main {
     color: rgb(170, 169, 169);
     color: rgb(7, 3, 34);
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.1vw;
     text-transform: capitalize;
     transition: .2s;
     background-color: rgb(255, 255, 65);
@@ -559,7 +568,7 @@ main {
 }
 
 .category {
-    padding: 1vh 0 0 0;
+    padding-top: 1vh;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -572,35 +581,42 @@ main {
 }
 
 .category h1 {
-    text-transform: capitalize;
-    font-size: 3rem;
+    font-size: 3vw;
     font-family: couture;
     height: 8vh;
     font-weight: 900;
-    color: #787878;
+    color: #8e8e8e;
 }
 
 .items {
-    height: calc(100vh - 9vh);
+    height: 45vw;
     width: 80%;
     /* padding: 0 2vh; */
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-evenly;
+}
+
+.part-1, .part-2{
+    display: flex;
+    width: 100%;
+    height: 47%;
     justify-content: space-between;
 }
 
 .item {
-    width: 21%;
-    height: 38vh;
+    width: 16vw;
+    height: 18.9vw;
     background-color: #3b757a;
     position: relative;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
 .item a {
-    height: 38vh;
+    height: 100%;
     width: initial;
     color: white;
     display: flex;
@@ -619,13 +635,13 @@ main {
 .item a h3 {
     position: absolute;
     text-align: center;
-    bottom: 0;
     padding: 1vh;
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.365) 40%, transparent);
+    bottom: 0;
     left: 50%;
     transform: translatex(-50%);
-    font-family: 'gilroy light';
+    font-family: gilroy-light;
     text-transform: capitalize;
     font-weight: 900;
     letter-spacing: 1.5px;
@@ -634,15 +650,15 @@ main {
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    font-size: 1.1rem;
+    font-size: 1.4vw;
     z-index: 2;
 }
 
 .item a h3 span {
     font-family: 'cocogoose light';
-    font-size: .8rem;
+    font-size: 1vw;
     background-color: rgb(255, 117, 32);
-    padding: .5vh;
+    padding:.8vh;
     border-radius: 5px;
     margin-top: 1vh;
 }
@@ -656,7 +672,7 @@ main {
 
 footer {
     height: max-content;
-    padding: 4vh 7vw;
+    padding: 2vw 7vw;
     width: 100%;
     background-color: rgb(243, 241, 241);
     display: flex;
@@ -665,7 +681,7 @@ footer {
 }
 
 footer *{
-    font-family: montserrat, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .online-shop, .policy {
@@ -682,18 +698,19 @@ footer>div>div{
 
 footer>div>div a {
     text-decoration: none;
-    font-size: .95rem;
+    font-size: 1.1vw;
+    font-weight: 100;
     color: #858585;
     -webkit-font-smoothing: antialiased;
     text-transform: capitalize;
 }
 
-footer>div> div:first-child a,footer>div> div:first-child h6,footer>div> div:first-child {
+footer>div>div:first-child a b,footer>div>div:first-child h6 b,footer>div> div:first-child, #return h6 b{
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
-    font-size: .9rem;
+    font-size: 1.1vw;
     color: #222;
-    letter-spacing: -0.2px;
+    font-weight: 900;
 }
 footer>div> div:first-child{
     margin-bottom: 2vh;
@@ -732,7 +749,6 @@ footer>div> div:first-child{
 
 #original h6, #return h6{
     color: #222;
-    font-size: .9rem;
     text-transform: uppercase;
 }
 
@@ -740,6 +756,7 @@ footer>div> div:first-child{
     text-transform: lowercase;
     color: #858585;
     font-weight: 100;
+    font-size: 1.1vw;
 }
 
 .social{
@@ -749,9 +766,8 @@ footer>div> div:first-child{
     justify-content: space-between;
 }
 
-.social h4{
-    padding: 0 .6vh;
-    font-size: .9rem;
+.social div h4{
+    font-size: 1.1vw;
 }
 
 .social div:last-child{
@@ -771,7 +787,7 @@ footer>div> div:first-child{
 }
 
 .social div:last-child a img{
-    height: 1.6rem;
+    height: 1.8vw;
     object-fit: contain;
     object-position: center;
 }

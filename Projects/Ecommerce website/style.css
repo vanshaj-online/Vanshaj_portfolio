@@ -73,7 +73,14 @@ nav{
     width: 10%;
 }
 
-.logo img {
+.logo a{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.logo a img {
     height: 7rem;
     width: auto;
 }

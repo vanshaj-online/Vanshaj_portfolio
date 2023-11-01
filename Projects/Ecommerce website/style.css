@@ -43,12 +43,13 @@ img{
 
 header,
 nav {
-    height: 12vh;
+    height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     z-index: 9;
+    box-shadow: 0 1px 11px -8px grey;
 }
 
 header nav>div {
@@ -125,10 +126,10 @@ nav{
     outline: none;
     border: none;
     padding: 0 2vh;
-    height: 6vh;
+    height: 50%;
     border-radius: 7px 0 0 7px;
     width: 60%;
-    box-shadow: 0px 0px 8px -1px rgba(186, 185, 185, 0.398);
+    box-shadow: 0px 0px 8px -1px rgba(145, 145, 145, 0.398);
     font-weight: 500;
 }
 
@@ -563,13 +564,17 @@ main {
     align-items: center;
 }
 
+.category>div:first-child{
+    margin: 6vh 0;
+}
+
 .category h1 {
     text-transform: capitalize;
     font-size: 3rem;
     font-family: couture;
     height: 8vh;
     font-weight: 900;
-    color: #333;
+    color: #787878;
 }
 
 .items {
@@ -617,22 +622,26 @@ main {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.365) 40%, transparent);
     left: 50%;
     transform: translatex(-50%);
-    font-family: 'cocogoose light';
+    font-family: 'gilroy light';
     text-transform: capitalize;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: 1.5px;
     height: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     z-index: 2;
 }
 
 .item a h3 span {
     font-family: 'cocogoose light';
     font-size: .8rem;
+    background-color: rgb(255, 117, 32);
+    padding: .5vh;
+    border-radius: 5px;
+    margin-top: 1vh;
 }
 
 .item a img {

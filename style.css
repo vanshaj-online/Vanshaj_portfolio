@@ -242,10 +242,6 @@ html {
 
 }
 
-.me img:hover {
-    transform: scale(1.07);
-}
-
 .title {
     justify-content: space-evenly;
     flex-direction: column;

@@ -41,7 +41,10 @@
 
 *:focus{
     outline: none;
-    border: 2px solid #8888;
+}
+
+img::selection{
+    background-color: transparent;
 }
 
 html,
@@ -154,6 +157,8 @@ nav{
     padding: 0 2vh;
     height: 50%;
     border-radius: 7px 0 0 7px;
+    font-weight: 900;
+    font-family: "Poppins";
     width: 60%;
     box-shadow: 0px 0px 8px -1px rgba(145, 145, 145, 0.398);
     font-weight: 500;
@@ -185,7 +190,6 @@ nav{
     align-items: center;
     font-size: 1vw;
     font-weight: 600;
-    text-transform: capitalize;
     color: #000;
 }
 
@@ -613,6 +617,7 @@ main {
     position: relative;
     border-radius: 15px;
     overflow: hidden;
+    transition: .1s;
 }
 
 .item a {
@@ -623,13 +628,10 @@ main {
     position: relative;
     background-position: center;
     background-size: cover;
-    filter: brightness(.9);
-    transition: .1s;
 }
 
-.item a:hover {
-    filter: brightness(1);
-
+.item:hover {
+    box-shadow: 0 0 8px -2px grey;
 }
 
 .item a h3 {
@@ -720,15 +722,23 @@ footer>div> div:first-child{
     width: 25%;
     min-height: 20vh;
 }
+
+#playstore a, #appstore a{
+    overflow: hidden;
+    border-radius: 8px;
+    display: grid;
+    place-content: center;
+}
+
 #appstore a img{
-    width: 9vw;
+    width: 8vw;
 }
 .playstore div{
     display: inline-block;
     font-weight: bold;
 }
 #playstore a img{
-    width: 10vw;
+    width: 9vw;
 }
 
 .original>div img{

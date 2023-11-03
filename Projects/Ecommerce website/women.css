@@ -339,8 +339,9 @@ main,#main{
     width: 100%;
     padding: 0 8vh;
     display: flex;
+    position: relative;
     align-items: center;
-    overflow-x: scroll;
+    overflow-x: hidden;
     justify-content: space-between;
 }
 
@@ -352,11 +353,43 @@ main,#main{
     align-items: center;
     flex: 0 0 auto;
     flex-direction: column;
+    transform: translateX(18%);
     justify-content: space-around;
 }
 
 .cat-prod:last-child{
     margin-right: 0vh;
+}
+
+.categories .prev{
+    left: 0;
+    top: 50%;
+}
+
+.categories .btn{
+    height: 3.5vw;
+    width: 3.5vw;
+    display: flex;
+    align-items: center;    
+    background-color: rgba(167, 167, 167, 0.485);
+    position: absolute;
+    backdrop-filter: blur(5px);
+    border-radius: 100%;
+    right: 0;
+    z-index: 99;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.categories .show{
+    display: inline-block;
+}
+
+.categories .btn img{
+    height: 100%;
+    width: 100%;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

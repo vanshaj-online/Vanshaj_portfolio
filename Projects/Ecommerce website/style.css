@@ -145,6 +145,25 @@ nav{
     transition: .1s;
     letter-spacing: -0.1px;
 }
+.center-nav li ul{
+    position: relative;
+}
+
+.center-nav li ul::before{
+    transition: .1s ;
+    width: 0%;
+    content: "";
+    position: absolute;
+    bottom: -.5vh;
+    height: 15%;
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+
+.center-nav li ul:hover::before{
+    background-color: #86c4ca;
+    width: 50%;
+}
 
 .center-nav li ul a:hover {
     color: #639fa5;

@@ -47,6 +47,8 @@ img::selection{
     background-color: transparent;
 }
 
+html{scroll-behavior: smooth;}
+
 html,
 body {
     height: 100%;
@@ -69,7 +71,6 @@ nav {
     justify-content: space-evenly;
     z-index: 9;
     box-shadow: 0 1px 11px -8px grey;
-    overflow: hidden;
 }
 
 nav *{
@@ -112,20 +113,21 @@ nav{
     width: 30%;
 }
 
-.center-nav li {
+.center-nav>li {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
     text-transform: capitalize;
+    height: 100%;
 }
 
-.center-nav li ul:last-child {
+.center-nav>li>ul:last-child {
     position: relative;
     text-transform: capitalize;
 }
 
-.center-nav li ul:last-child a::before {
+.center-nav>li>ul:last-child>a::before {
     position: absolute;
     content: 'new';
     top: -1.5vh;
@@ -138,35 +140,63 @@ nav{
     left: 100%;
 }
 
-.center-nav li ul a {
+.center-nav>li>ul>a {
     text-decoration: none;
     color: black;
     font-weight: 800;
     transition: .1s;
-    letter-spacing: -0.1px;
-}
-.center-nav li ul{
-    position: relative;
+    height: 100%;
 }
 
-.center-nav li ul::before{
-    transition: .1s ;
-    width: 0%;
-    content: "";
-    position: absolute;
-    bottom: -.5vh;
-    height: 15%;
-    /* left: 50%;
-    transform: translateX(-50%); */
-}
 
-.center-nav li ul:hover::before{
-    background-color: #86c4ca;
-    width: 50%;
-}
-
-.center-nav li ul a:hover {
+.center-nav>li>ul>a:hover {
     color: #639fa5;
+}
+
+.center-nav>li>ul{
+    position: relative;
+    height: 100%;
+    line-height: 10vh;
+}
+
+.center-nav>li>ul .drop-down{
+    position: absolute;
+    top: 100%;
+    width: 15vw;
+    line-height: 2.5;
+    padding: 2vh;
+    background-color: whitesmoke;
+    border-radius: 0 0 10px 10px;
+    left:50%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 6px -9px rgba(128, 128, 128, 0.428) inset;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+}
+
+
+.drop-down ul a{
+    text-decoration: none;
+    font-size: 1.2vw;
+    color: grey;
+    font-weight: 900;
+    transition: .1s linear;
+}
+
+.drop-down ul a:hover{
+    color: black;
+}
+
+.center-nav > li > .show > .drop-down {
+    visibility: visible;
+    top: 100%;
+    opacity: 1;
 }
 
 .right-nav input,
@@ -224,6 +254,10 @@ nav{
 main {
     width: 100%;
     margin-bottom: 10vh;
+}
+
+main > *{
+    transition: .2s;
 }
 
 .hero {
@@ -689,6 +723,76 @@ main {
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.section-4{
+    height: 40vw;
+    width: 100%;
+    margin: 10vh 0;
+    display: flex;
+    align-items: center;
+}
+
+.right, .left{
+    height: 30vw;
+    width: 50%;
+    display: inline-block;
+}
+
+.right a, .left a{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.right a img, .left a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .2s ease;
+    filter: brightness(.9);
+    -webkit-filter: brightness(.9);
+}
+
+.right a img:hover,
+.left a img:hover{
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
+}
+
+.right a span,
+.left a span{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5vw;
+    min-width: 5vw;
+    align-items: center;
+    bottom: 1%;
+    font-family: "Poppins";
+    text-transform: capitalize;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right a span h5,
+.left a span h5{
+    color: white;
+    background-color: orangered;
+    padding: .9vh;
+    font-weight: 900;
+    font-size: 1.3vw;
+    border-radius: 5px;
+}
+
+.section-4 .for{
+    background-color: white;
+    font-weight: 900;
+    color: black;
 }
 
 footer {

@@ -2,7 +2,9 @@ let scroller = document.querySelectorAll('.cat-prod');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 let lastelem = document.querySelector('#last');
-let check = 'hidden' 
+let check = 'hidden' ;
+var hovers = document.querySelectorAll('.hover');
+var main = document.querySelector('.hero')
 const observer = new IntersectionObserver(entries =>{
     entries.forEach(last => {
         if(last.intersectionRatio !== 1 ){
@@ -28,3 +30,15 @@ const observer = new IntersectionObserver(entries =>{
     })
 })
 observer.observe(lastelem);
+
+
+hovers.forEach(elem => {
+    elem.addEventListener('mousemove', function () {
+        elem.classList.add('show')
+        main.style.filter = 'blur(2px)'
+    })
+    elem.addEventListener('mouseleave', function () {
+        elem.classList.remove('show')
+        main.style.filter = 'blur(0)'
+    })
+})

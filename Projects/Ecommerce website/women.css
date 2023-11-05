@@ -132,7 +132,7 @@ nav {
     top: -1.5vh;
     color: orangered;
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 8px;
     text-transform: capitalize;
     padding: .5vh;
@@ -256,6 +256,10 @@ nav {
     height: 100%;
 }
 
+.cart #profile>a {
+    height: 100%;
+}
+
 .cart #profile li {
     position: absolute;
     top: 10vh;
@@ -263,6 +267,7 @@ nav {
     list-style-type: none;
     padding: 1vh 0;
     backdrop-filter: blur(12px);
+    line-height: 10vh;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
@@ -270,7 +275,19 @@ nav {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    background-color: rgba(245, 245, 245, 0.475);
+    background-color: rgba(126, 126, 126, 0.75);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cart #profile li:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart #profile .active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .cart #profile li ul {
@@ -287,6 +304,7 @@ nav {
     padding: 0 2vh;
     background-color: #74bac0;
     color: white;
+    border: 2px solid #74bac0;
     border-radius: 5px;
     width: 100%;
     transition: .1s linear;
@@ -318,9 +336,6 @@ nav {
     justify-content: left;
     text-align: left;
     font-size: 1.1vw;
-}
-.hover .drop-down>ul>a{
-    color: grey;
 }
 /* nav ends */
 

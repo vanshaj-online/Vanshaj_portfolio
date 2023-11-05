@@ -4,7 +4,7 @@ const next = document.querySelector('.next');
 let lastelem = document.querySelector('#last');
 let check = 'hidden' ;
 var hovers = document.querySelectorAll('.hover');
-var main = document.querySelector('.hero')
+var main = document.querySelector('#main')
 const observer = new IntersectionObserver(entries =>{
     entries.forEach(last => {
         if(last.intersectionRatio !== 1 ){

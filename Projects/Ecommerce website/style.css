@@ -190,7 +190,7 @@ nav{
 }
 
 .drop-down ul a:hover{
-    color: black;
+    color: #74bac0;
 }
 
 .center-nav > li > .show > .drop-down {
@@ -239,12 +239,80 @@ nav{
     align-items: center;
     font-size: 1vw;
     font-weight: 600;
+    height: 100%;
     color: #000;
 }
 
 .cart a img {
     height: 1.7vw;
     color: rgb(152, 152, 152);
+}
+
+.cart #profile{
+    position: relative;
+    height: 100%;
+}
+
+.cart #profile li{
+    position: absolute;
+    top: 10vh;
+    width: 12vw;
+    list-style-type: none;
+    padding: 1vh 0;
+    backdrop-filter: blur(12px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-color: rgba(245, 245, 245, 0.475);
+}
+
+.cart #profile li ul{
+    line-height: 2;
+    display: flex;
+    padding: 0 2vh;
+    justify-content: left;
+    margin-bottom: 5px;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.cart #profile li ul:first-child a{
+    padding: 0 2vh;
+    background-color: #74bac0;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    transition: .1s linear;
+}
+
+.cart #profile li ul:hover {
+    background-color: #74bac0;
+}
+.cart #profile li ul:hover>a{
+    color: white;
+}
+.cart #profile li ul:first-child{
+    background-color: transparent;
+}
+
+.cart #profile li ul:first-child a:hover{
+    background-color: rgb(254, 254, 254);
+    border: 2px solid #74bac0;
+    color: #74bac0;
+}
+
+.cart #profile li ul a{
+    color: #fff;
+    width: max-content;
+    transition: .05s linear;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    font-size: 1.1vw;
 }
 
 /* nav ends */

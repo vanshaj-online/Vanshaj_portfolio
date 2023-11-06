@@ -162,16 +162,16 @@ nav{
 .center-nav>li>ul .drop-down{
     position: absolute;
     top: 100%;
-    width: 15vw;
+    width: 12vw;
     line-height: 2.5;
-    padding: 2vh;
+    padding: 2vh 3vh;
     background-color: whitesmoke;
     border-radius: 0 0 10px 10px;
     left:50%;
     display: flex;
     flex-direction: column;
     box-shadow: 0 8px 6px -9px rgba(128, 128, 128, 0.428) inset;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     transform: translateX(-50%);
     list-style: none;

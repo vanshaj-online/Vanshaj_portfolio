@@ -89,7 +89,7 @@
                 <div class="border">
                     <div class="form">
                         <!-- login form -->
-                            <div class="login">
+                            <div class="login " id="login">
                                 <form action="">
                                     <div class="logo">Welcome to<span>PARCEL</span></div>
                                     <input type="tel" placeholder="Phone" required>
@@ -97,28 +97,21 @@
                                     <div id="forget"><a href="">forget password?</a></div>
                                     <button type="submit">Login</button>
                                     <div id="new">
-                                        <span>new customer? <a href="" id="newbtn">create account</a> </span>
+                                        <span>new customer? <a href="#" id="newbtn">create account</a> </span>
                                     </div>
                                 </form>
                             </div>
                         <!-- login form -->
                         <!-- signup form -->
-                        <div class="signup">
-                            <form action="">
+                        <div class="signup" id="signup">
+                            <form action="index.html">
                                 <div class="logo">Welcome to<span>PARCEL</span></div>
                                 <div>
                                     <input type="text" placeholder="First name"><input type="text" placeholder="Last name">
                                 </div>
                                 <input type="email" placeholder="email iD">
                                 <input type="tel" placeholder="Phone">
-                                <div>
-                                    <label for="gender">Gender</label>
-                                    <select name="gender" id="gender">
-                                        <option value="">choose gender</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                    </select>
-                                </div>
+                                <input type="password" placeholder="Password">
                                 <button>
                                     Sign up
                                     <div class="arrow-wrapper">
@@ -126,6 +119,7 @@
                         
                                     </div>
                                 </button>
+                                <div><span>existing user?<a href="#" id="return"> login</a></span></div>
                             </form>
                         </div>
                         <!-- signup form -->

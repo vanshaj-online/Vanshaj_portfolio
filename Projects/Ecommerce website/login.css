@@ -376,14 +376,22 @@ main {
 
 /* Login form */
 
+.form>.login{
+    top: -0%;
+}
+
 .form>.login, .form>.signup {
     height: 100%;
     width: 100%;
     display: flex;
     position: absolute;
     flex-direction: column;
+    transition: .35s linear;
 }
 
+.form .animate-2{
+    top: -100%;
+}
 
 .login>form {
     height: 100%;
@@ -420,6 +428,9 @@ main {
     letter-spacing: 5px;
     font-weight: 500;
     font-family: 'Righteous', sans-serif;
+    background-color: royalblue;
+    color: white;
+    padding: 0 .6vh;
 }
 
 .login>form>input {
@@ -499,14 +510,18 @@ form button:hover {
 /* signup form */
 
 .signup{
-    position: absolute;
     top: 100%;
+    position: absolute;
     background-color: whitesmoke;
+}
+
+.animate{
+    top:0;
 }
 
 .signup>form{
     height: 100%;
-    padding: 4vh 2vh;
+    padding: 0 2vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -514,10 +529,12 @@ form button:hover {
     align-items: center;
 }
 
+
 .signup>form>*{
     width: 70%;
-    margin-bottom: 3.5vh;
+    margin-bottom: 3vh;
 }
+
 
 .signup>form>div:nth-child(2){
     display: flex;
@@ -529,17 +546,17 @@ form button:hover {
 
 .signup input::placeholder{
     color: rgba(65, 105, 225, 0.651);
+    text-transform: capitalize;
 }
 
 .signup form input{
     height: 4vh;
     border: none;
+    padding: 1vh;
     border-bottom: 2px solid rgba(65, 105, 225, 0.669);
     background-color: transparent;
     font-size: 1.1vw;
     font-weight: 600;
-    padding: 1vh;
-    text-transform: capitalize;
     outline: none;
 }
 
@@ -563,7 +580,7 @@ form button:hover {
     font-size: 1.1vw;
 }
 
-.signup>form>div:nth-child(5){
+.signup>form>div:nth-child(6){
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -581,18 +598,21 @@ form button:hover {
     --hover-color: rgb(13, 67, 227);
     --arrow-width: 10px;
     --arrow-stroke: 2px;
-    box-sizing: border-box;
     width: 35%;
-    border: 0;
+    border: 0;    
+    height: 2.7rem;
     border-radius: 20px;
     color: var(--secondary-color);
-    padding: 1em 1.8em;
+    /* padding: 1em 1.8em; */
     background: var(--primary-color);
     display: flex;
     transition: 0.2s background;
     align-items: center;
+    justify-content: center;
     gap: 0.6em;
     font-weight: bold;
+    font-size: 1.1vw;
+    white-space: nowrap;
 }
 
 .signup button .arrow-wrapper {
@@ -634,5 +654,20 @@ form button:hover {
 
 .signup button:hover .arrow:before {
     right: 0;
+}
+
+.signup form>div:last-child{
+    display: flex;
+    justify-content: center;
+}
+.signup form>div:last-child span{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.signup form>div:last-child a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(0, 132, 255);
+    font-weight: 600;
 }
 /* signup form */

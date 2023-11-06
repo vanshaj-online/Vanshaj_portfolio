@@ -40,11 +40,16 @@ dropdownprofile()
 
 function loginToSignup(){
     let newbtn = document.querySelector('#newbtn');
+    let returnToLog = document.querySelector('#return')
     let signup = document.querySelector('.signup');
     let login = document.querySelector('.login');
     newbtn.addEventListener('click',function(){
-        signup.style.top = 0;
-        login.style.top = '-100%';
+        login.classList.add('animate-2')
+        signup.classList.add('animate')
+    })
+    returnToLog.addEventListener('click',function(){
+        login.classList.remove('animate-2')
+        signup.classList.remove('animate')
     })
 }
 loginToSignup()

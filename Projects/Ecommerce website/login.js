@@ -37,3 +37,14 @@ function dropdownprofile() {
     })
 }
 dropdownprofile()
+
+function loginToSignup(){
+    let newbtn = document.querySelector('#newbtn');
+    let signup = document.querySelector('.signup');
+    let login = document.querySelector('.login');
+    newbtn.addEventListener('click',function(){
+        signup.style.top = 0;
+        login.style.top = '-100%';
+    })
+}
+loginToSignup()

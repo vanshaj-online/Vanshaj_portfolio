@@ -374,50 +374,92 @@ main{
 
 .part-1, .part-2{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
 }
-
+.part-1>div,
+.part-2>div{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
 .shop-card{
-    border: 1px solid black;
     display: flex;  
-    height: 30rem;
-    width: 25rem;
+    height: 35rem;
+    width: 22rem;
     align-items: center;
     justify-content: center;
     margin: 2vh;
+    transition: .1s linear;
+    border: .01px solid rgb(201, 201, 201);
+}
+.shop-card:hover{
+    box-shadow: 0 0 12px -5px grey;
 }
 
 .item{
-    height: 95%;
-    width: 95%;
-    /* justify-content: space-evenly; */
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     display: flex;
+    padding-bottom: 1vh;
     flex-direction: column;
 }
+
 .item .photo{
-    height: 70%;
+    height: 75%;
     width: 100%;
-    border: 1px solid blue;
 }
 
-.title-price, .buy-cart{
+.item .photo img{
+    height: 100%;
     width: 100%;
-    margin: 1.5vh 0 ;
+    object-fit: cover;
+    object-position: top;
+}
+
+.title-price, .brand{
+    width: 100%;
+    padding: 0 1vh;
     height: fit-content;
-    border: 1px solid yellowgreen;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+}
+.title-price span,
+.brand span{
+    font-size: 1.2vw;
+    width: max-content;
+    align-items: center;
+    text-transform: capitalize;
+    white-space: nowrap;
+    height: auto;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
 }
 
-.title-price span,
-.buy-cart span{
+.title-price span a,
+.brand span a{
+    font-size: 1.1vw;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.brand span a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    color: black;
     font-size: 1.2vw;
 }
-
-
-
 /* main section */
 /* footer section */
 footer {

@@ -372,10 +372,44 @@ main{
     text-transform: capitalize;
 }
 
+.filter{
+    width: 95%;
+    padding: 0 1vh;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filter>span{
+    margin-right: 2rem;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #888;
+    font-weight: 600;
+    transition: .2s linear;
+}
+
+.filter>span:hover{
+    color: #639fa5;
+}
+
+.filter>span:first-child{
+    font-size: 1.5vw;
+    height: 100%;
+    color: #444;
+}
+.filter>span:first-child:hover{
+    color: #444;
+}
 .container{
-    height: max-content;
+    height: auto;
+    overflow-x: hidden;
     width: 100%;
-    border: 1px solid blue;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -390,14 +424,18 @@ main{
     margin: 2vh;
     transition: .1s linear;
     border: .01px solid rgb(201, 201, 201);
+    transition: .2s linear;
 }
 .shop-card:hover{
     box-shadow: 0 0 12px -5px grey;
 }
 
 .container .hidden{
-    opacity: 0;
     display: none;
+}
+
+.container .appear{
+    display: flex;
 }
 
 .item{
@@ -413,6 +451,21 @@ main{
 .item .photo{
     height: 75%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.item .photo a{
+    height: 100%;
+    width: 100%;
+}
+
+.wallets .item .photo{
+    padding: 0 2vh;
+}
+.wallets .item .photo img, .goggles .item #goggles img{
+    object-fit: contain;
+    object-position: center;
 }
 
 .item .photo img{
@@ -433,28 +486,34 @@ main{
 .title-price span,
 .brand span{
     font-size: 1.2vw;
-    width: max-content;
-    align-items: center;
+    align-items: flex-start;
     text-transform: capitalize;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     height: auto;
     font-weight: 600;
+    width: 100%;
+    overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.title-price > span:last-of-type{
+    font-size: 1vw;
 }
 
 .title-price span a,
 .brand span a{
-    font-size: 1.1vw;
+    font-size: 1vw;
     text-decoration: none;
-    color: #555;
     font-weight: 500;
+    color: #555;
+    width: max-content;
     text-transform: capitalize;
 }
 
 .brand span a{
     height: 100%;
-    width: 100%;
+    width: max-content;
     display: flex;
     justify-content: center;
     font-weight: 600;

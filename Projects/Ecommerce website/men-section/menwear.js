@@ -28,3 +28,15 @@ function dropdownprofile() {
     })
 }
 dropdownprofile()
+
+function filter(){
+    let products = document.querySelectorAll('.shop-card');
+    // console.log(products)
+    products.forEach(elem =>{
+        if (!elem.classList.contains('tshirt')){
+            elem.classList.add('hidden')
+            console.log(elem)
+        }
+    })
+}
+// filter()

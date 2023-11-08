@@ -372,19 +372,15 @@ main{
     text-transform: capitalize;
 }
 
-.part-1, .part-2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.container{
+    height: max-content;
     width: 100%;
-}
-.part-1>div,
-.part-2>div{
+    border: 1px solid blue;
     display: flex;
-    width: 50%;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .shop-card{
     display: flex;  
     height: 35rem;
@@ -397,6 +393,11 @@ main{
 }
 .shop-card:hover{
     box-shadow: 0 0 12px -5px grey;
+}
+
+.container .hidden{
+    opacity: 0;
+    display: none;
 }
 
 .item{

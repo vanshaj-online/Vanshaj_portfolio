@@ -394,6 +394,7 @@ main{
     transition: .2s linear;
 }
 
+
 .filter>span:hover{
     color: #639fa5;
 }
@@ -427,6 +428,7 @@ main{
 }
 .shop-card:hover{
     box-shadow: 0 0 12px -5px grey;
+    transform: scale(1.05);
 }
 
 .container .hidden{

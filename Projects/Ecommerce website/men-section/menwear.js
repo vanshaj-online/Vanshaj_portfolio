@@ -31,14 +31,21 @@ dropdownprofile()
 
 function filterProduct() {
     let products = document.querySelectorAll('.shop-card');
-    let filter = '';
     let btns = document.querySelectorAll('.filter > span');
-    function hoverToGetId(){
+
+    function changeColor(){
         btns.forEach(function(elem){
-            elem.addEventListener('mouseenter',() =>{
-                filter = elem.getAttribute('id')
+            elem.addEventListener('click',function(){
+                elem.style.color = '#639fa5'
+
+                btns.forEach(otherFilter =>{
+                    if(otherFilter !== elem){
+                        otherFilter.style.color ="";
+                    }
+                })
             })
-        })
+            })
+        
     }
     function removeHidden(){
         products.forEach(elem =>{
@@ -46,9 +53,6 @@ function filterProduct() {
                 elem.classList.remove('hidden')
             }
         })
-    }
-    function changeColor(){
-        document.querySelector(`#${filter}`).style.color = '#639fa5'
     }
     function tshirtFilter() {
         products.forEach(elem => {
@@ -97,51 +101,43 @@ function filterProduct() {
     document.querySelector('#all').addEventListener('click', function () {
         removeHidden()
         changeColor()
-        console.log(filter)
         filter = 'all';
     })
     document.querySelector('#tshirt').addEventListener('click', function () {
         removeHidden()
         changeColor()
-        console.log(filter)
         tshirtFilter()
         filter = 'tshirt'
     })
     document.querySelector('#shirt').addEventListener('click', function () {
         removeHidden()
         changeColor()
-        console.log(filter)
         shirtFilter()
         filter = 'shirt'
     })
     document.querySelector('#jacket').addEventListener('click', function () {
         removeHidden()
         changeColor()
-        console.log(filter)
         jacketFilter()
         filter = 'jacket'
     })
     document.querySelector('#jeans').addEventListener('click', function () {
         removeHidden()
         changeColor()
-        console.log(filter)
         bottomwearFilter()
         filter = 'jeans'
     })
     document.querySelector('#shoes').addEventListener('click', function () {
         removeHidden()
         changeColor()
-        console.log(filter)
         shoesFilter()
         filter = 'shoes'
     })
     document.querySelector('#accessories').addEventListener('click', function () {
         removeHidden()
         changeColor()
-        console.log(filter)
         accessoriesFilter()
         filter = 'accessories'
     })
-    hoverToGetId()
 }
 filterProduct()

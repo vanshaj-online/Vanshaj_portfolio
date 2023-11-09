@@ -398,13 +398,12 @@ main{
     color: #639fa5;
 }
 
-.filter>span:first-child{
+.filter>h3{
     font-size: 1.5vw;
     height: 100%;
     color: #444;
-}
-.filter>span:first-child:hover{
-    color: #444;
+    margin-right: 2rem;
+    text-transform: capitalize;
 }
 .container{
     height: auto;
@@ -432,10 +431,6 @@ main{
 
 .container .hidden{
     display: none;
-}
-
-.container .appear{
-    display: flex;
 }
 
 .item{

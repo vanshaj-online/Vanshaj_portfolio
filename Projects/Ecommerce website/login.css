@@ -15,6 +15,9 @@
     -webkit-user-drag: none;
 }
 
+*::selection{
+    background-color: transparent;
+}
 
 html,
 body {

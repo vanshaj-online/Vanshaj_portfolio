@@ -52,7 +52,7 @@
 
 @font-face {
     font-family: nunito;
-    src: url(./FONTS/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+    src: url(/FONTS/nunito.ttf);
     font-family: andika;
     src: url(./FONTS/Andika-Regular.ttf);
     font-family: gilroy;
@@ -60,7 +60,8 @@
     font-family: 'gilroy light';
     src: url(./FONTS/Gilroy-Light.otf);
     font-family: sign;
-    src: url(./FONTS/CedarvilleCursive-Regular.ttf)
+    src: url(./FONTS/CedarvilleCursive-Regular.ttf);
+    font-display: optional;
 }
 
 * {

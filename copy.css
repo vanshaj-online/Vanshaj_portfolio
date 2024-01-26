@@ -43,6 +43,15 @@ footer {
     transition: 1s cubic-bezier(.19, 1, .22, 1)
 }
 
+.hide{
+    display: none;
+    opacity: 0  ;
+}
+.shown{
+    display: flex;
+    opacity: 1;
+}
+
 .about-me,
 .banner h1,
 .image,
@@ -316,7 +325,6 @@ html {
 }
 
 #page,
-#projects,
 .about-me,
 .contain,
 .projects,
@@ -435,7 +443,8 @@ html {
     justify-content: left;
     padding-left: 5vh;
     flex-direction: column;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .skills>* {
@@ -529,10 +538,15 @@ html {
     align-items: center
 }
 
-.container img {
-    width: 150%;
-    height: 150%;
-    object-fit: cover
+.skills>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    transform: scale(1.6);
+    left: 0;
+    transition: all .2s linear;
 }
 
 .social>h1,
@@ -542,16 +556,16 @@ html {
     color: #fff;
     text-decoration: none;
     font-size: 4.3vw;
-    text-align: left
+    text-align: left;
 }
 
 .social>h1 a {
     font-family: 'Poppins', sans-serif;
-    text-transform: lowercase;
+    text-transform: capitalize;
     font-weight: 500;
     margin: 2vh 0;
     font-size: 5vw;
-    position: relative
+    position: relative;
 }
 
 .date,
@@ -579,25 +593,22 @@ html {
 
 .projects {
     width: 100%;
-    height: 100vh;
-    justify-content: center
+    min-height: max-content;
+    justify-content: center;
 }
 
 .desc,
-.project,
-.thumbnail {
-    height: max-content
+.project{
+    height: max-content;
 }
 
 #projects {
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 2vh 0;
-    flex-wrap: wrap
+    display: grid;
+    grid-template-columns: repeat(3, auto);
 }
 
 .contain {
-    min-height: 95vh;
+    height: 100%;
     width: 95%;
     justify-content: start;
     padding: 2vh;
@@ -642,10 +653,12 @@ html {
 }
 
 .project {
-    width: 40vw;
+    width: auto;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: start
+    align-items: start;
+    margin: 2rem;
+    min-height: 60%;
 }
 
 .desc,
@@ -655,7 +668,9 @@ form {
 }
 
 .thumbnail {
-    margin-bottom: .8vh
+    margin-bottom: .8vh;
+    height: 20rem;
+    width: auto;
 }
 
 .thumbnail img {
@@ -1115,11 +1130,10 @@ footer h3 span{
     }
 
     #projects {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
     }
 
     .project {
@@ -1385,12 +1399,10 @@ footer h3 span{
     }
 
     #projects {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
+        display: grid;
+        gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
     }
 
     .desc,
@@ -1685,11 +1697,10 @@ footer h3 span{
     }
 
     #projects{
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        display: grid;
+        gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
     }
     
     .project {

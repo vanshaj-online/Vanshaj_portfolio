@@ -1,9 +1,35 @@
+@import url(https://fonts.googleapis.com/css2?family=Secular+One&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Poppins:wght@500&display=swap');
 
+#dd,
+#mm,
+.date {
+    color: #8c73d4
+}
+
+.form,
+.me,
+.skills,
+.social,
+.thumbnail {
+    overflow: hidden
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+*,
+.top>div,
+footer {
+    margin: 0;
+    -webkit-user-drag: none;
+}
+
 :root {
     --bgcolor: #06000f;
-    --dark-gray: #a1a1a116;
+    --dark-gray: #a1a1a116
 }
 
 .cursor {
@@ -12,11 +38,29 @@
     border-radius: 100%;
     border: 2px solid #927adb;
     position: absolute;
-    background: transparent;
+    background: 0 0;
     z-index: 999;
-    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition: 1s cubic-bezier(.19, 1, .22, 1)
 }
 
+.hide{
+    display: none;
+    opacity: 0  ;
+}
+.shown{
+    display: flex;
+    opacity: 1;
+}
+
+.about-me,
+.banner h1,
+.image,
+.section,
+.skills,
+.social,
+.top {
+    position: relative
+}
 
 .left-nav,
 .photo,
@@ -25,20 +69,10 @@
     place-content: center
 }
 
-
 .new>h3:hover,
 .title>p:hover {
-    color: rgb(125, 91, 227);
-    transition: .3s;
-    -webkit-text-stroke: rgb(125, 91, 227) 2px solid;
-}
-
-
-.about-me,
-.banner h1,
-.section,
-.skills {
-    position: relative
+    color: #7d5be3;
+    -webkit-text-stroke: rgb(125, 91, 227) 2px solid
 }
 
 .free-space,
@@ -50,20 +84,24 @@
 }
 
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    color: #7d5be3;
+    font-family: 'Secular One', sans-serif;
+    color: #7d5be3
 }
 
-*::selection {
+::selection {
     color: var(--bgcolor);
-    background: #8c73d4;
+    background: #8c73d4
+}
+
+.about-me,
+.photo {
+    background: #7c39b21a
 }
 
 .section img::selection {
-    background: none;
+    background: 0 0
 }
 
 body,
@@ -71,26 +109,18 @@ html {
     height: 100%;
     width: 100%;
     font-size: 1vw;
-    background: url(./images/bg.jpg);
-    background-size: cover;
-    background-position: center;
-    font-display: optional;
+    background: url(./images/bg.jpg) center/cover
 }
 
-.main{
+.main {
     backdrop-filter: blur(50px) brightness(100%) saturate(100%);
-    -webkit-backdrop-filter: blur(50px);
-    
-}
-
-.image {
-    position: relative;
+    -webkit-backdrop-filter: blur(50px)
 }
 
 .add {
     height: 10vh;
     width: 100%;
-    display: flex;
+    display: flex
 }
 
 .desk-right-nav {
@@ -98,27 +128,32 @@ html {
     width: 7vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .desk-right-nav a {
+    font-family: cabin;
+    text-decoration: none;
     height: 60%;
     width: 90%;
     border: none;
-    font-family: cabin;
-    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.3vw;
     border-radius: 10px;
     background: #8c73d4;
-    color: white;
-    /* transition: .1s; */
+    color: #fff;
+    transition: .3s
+}
+
+.me,
+.section img {
+    border-radius: 100%
 }
 
 .desk-right-nav a:hover {
-    background: #6546c0;
+    background: #6546c0
 }
 
 .left-nav,
@@ -130,7 +165,6 @@ html {
 .svg>div {
     background: #5d20be45
 }
-
 
 .about,
 .add img,
@@ -145,23 +179,27 @@ html {
     width: 100%;
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: space-between;
-    padding: 0 6%;
+    padding: 0 6%
 }
 
-.banner{
+.banner {
     align-items: center
-}
-
-.top>div {
-    margin: 0;
 }
 
 .left-nav {
     width: 5vw;
-    display: grid;
+    display: grid
+}
 
+.banner,
+.image,
+.new,
+.section-3,
+.skills,
+.social,
+.title {
+    display: flex
 }
 
 .left-nav h3 {
@@ -172,31 +210,26 @@ html {
     font-weight: 100
 }
 
-.banner,
-.image,
-.new {
-    display: flex
-}
-
 .new>h3,
 .title>p {
     font-weight: 400;
     cursor: default;
     background-color: transparent;
+    transition: color .1s linear;
 }
 
+#page,
 .banner,
 .new,
 .section,
-.section-2 {
+.section-2,
+.section-3 {
     width: 100%
 }
 
-
 .section img {
     height: 15vw;
-    width: 15vw;
-    border-radius: 100%
+    width: 15vw
 }
 
 .image {
@@ -204,9 +237,8 @@ html {
     flex-direction: column;
     align-items: center;
     padding: 2vw;
-    justify-content: flex-end;
+    justify-content: flex-end
 }
-
 
 .image>div:nth-child(2) {
     align-items: end;
@@ -215,17 +247,14 @@ html {
 }
 
 .me {
-    overflow: hidden;
-    border-radius: 100%;
     height: 18rem;
-    width: 18rem;
+    width: 18rem
 }
 
 .me img {
     height: 100%;
     width: 100%;
-    transition: all ease .3s;
-
+    transition: .3s
 }
 
 .title {
@@ -233,43 +262,47 @@ html {
     flex-direction: column;
     align-items: start;
     height: 30vh;
-    display: flex;
     width: 100%
 }
 
 .new {
     justify-content: center;
     height: 10vh;
-    margin-bottom: 3vh;
+    margin-bottom: 3vh
+}
+
+.about-me,
+.title>div:last-child {
+    justify-content: center;
+    cursor: default
 }
 
 .new>h3 {
     font-size: 4.5rem;
     -webkit-text-stroke: rgb(125, 91, 227) 1.5px;
-    color: transparent;
+    color: transparent
 }
 
 .title>div:last-child {
     width: 100%;
     height: 5vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: default;
+    align-items: center
+}
+
+#page,
+.date {
+    align-items: center
 }
 
 .title>div:last-child>p {
     font-size: 1.5vw;
     letter-spacing: -.2px;
     font-family: cabin, 'sans serif';
-    transition: all .2s;
+    transition: .2s
 }
 
-.title>div:last-child>p:hover {
-    transform: scale(1.05)
-}
-
-.new>h3:hover {
+.svg>div>img:hover {
     transform: scale(1.1)
 }
 
@@ -282,332 +315,331 @@ html {
 .banner h1 {
     font-size: 9vw;
     margin-right: 2vw;
-    cursor: default;
+    cursor: default
 }
 
-.section-2 {
+.photo,
+.section-2,
+.svg>div {
     display: grid
+}
+
+#page,
+.about-me,
+.contain,
+.projects,
+.social div,
+.svg {
+    display: flex
 }
 
 .about-me,
 .photo {
     height: 100%;
-    width: 42%;
-    /* background: #856ad6 */
-}
-
-#page,
-.section-3 {
-    width: 100%
+    width: 42%
 }
 
 #page {
     height: 90vh;
-    display: flex;
-    align-items: center;
     justify-content: center;
     padding: 0 vw
 }
 
 .about-me {
     border-radius: 20px 0 0 20px;
-    display: flex;
-    justify-content: center;
-    background: #7c39b21a;
     padding-left: 5vh;
     flex-direction: column;
-    cursor: default
 }
 
 .photo,
-.svg>div {
-    display: grid
+.skills,
+.social {
+    border-radius: 0 20px 20px 0
 }
 
 .about-me h2 {
     text-transform: uppercase;
     color: #fff;
-    font-size: 2.5vw;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    margin: 2vh 0;
-    background: transparent;
+    font-size: 4vw;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    margin: 2vh 0 3vw 0;
+    background: 0 0;
 }
 
 .about-me p,
-.skills>h4 {
-    text-transform: capitalize;
+.skills>h4,
+.social>h1,
+.social>h1 a {
+    text-transform: capitalize
 }
-
 
 .about-me p {
     font-weight: 600;
     text-align: justify;
-    font-family: "Poppins", 'sans serif';
-    background-color: transparent;
+    font-family: "Quicksand", sans-serif;
 }
 
 .about-me p>span {
-    color: rgb(255, 255, 255, 0.315);
-    background: transparent;
+    color: rgb(255, 255, 255, .315);
+    background: 0 0
 }
-
 
 .about-me p>*,
 .skills>*,
 .skills>div:first-child>h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 5vw;
-    /* background: #856ad6; */
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-size: 5vw
+}
+
+.date,
+.skills>* {
+    font-size: 1.5vw;
+    cursor: default
 }
 
 .about-me p,
 .about-me p>* {
-    font-size: 2vw;
-    background-color: #856ad6;
+    font-size: 1.6vw;
+    background-color: #856ad6
 }
 
 .about-me p {
     color: #dadada69;
-    background: #7c39b200;
-
+    background: #7c39b200
 }
 
 .about-me h2 span {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Quicksand", sans-serif;
     color: #fafa36;
     border-radius: 9px;
     letter-spacing: 1px;
-    font-size: 2.5vw
-}
-
-.photo {
-    border-radius: 0 20px 20px 0;
-    background: #7c39b21a;
-}
-
-.section-3,
-.social,
-.skills {
-    display: flex
+    font-size: 4vw;
 }
 
 .photo img {
     height: 65vh;
     width: 25vw;
     border-radius: 20px;
-    background: transparent;
+    background: 0 0
 }
 
 .section-3 {
     height: 130vh;
-    justify-content: center;
+    justify-content: center
 }
 
 .skills,
 .social {
     margin: 15vh 0;
     width: 48%;
-    border-radius: 0 20px 20px 0;
-    height: 101.5vh;
-
+    height: 101.5vh
 }
 
 .skills {
     border-radius: 20px 0 0 20px;
-    background: rgba(84, 83, 85, 0.057);
+    background: rgba(84, 83, 85, .057);
     justify-content: left;
     padding-left: 5vh;
     flex-direction: column;
     flex-wrap: wrap;
-    overflow: hidden;
+    position: relative;
 }
 
 .skills>* {
-    margin: 4vw 0 1.5vw 2vw;
-    font-size: 1.5vw;
-    cursor: default;
-    background: var(--dark-gray);
+    margin: 2vh;
+    background: var(--dark-gray)
 }
 
-.skills * {
-    background: transparent;
+.skills *,
+.social>h1 a,
+.svg,
+.svg>div>img {
+    background: 0 0
 }
-
 
 .skills>h4 {
     width: max-content;
     border-radius: 7px;
     color: #fff;
-    padding: .2vw .8vw;
-    height: min-content;
+    font-family: cabin;
+    font-weight: 100;
+    padding: .2vw 8px;
+    height: min-content
+}
+
+.contain,
+.form,
+.svg>div {
+    border-radius: 20px
 }
 
 .skills h1>span {
-    color: rgb(66, 183, 255);
-    font-family: 'Oooh Baby',cursive;
-    transition: .3s;
+    color: #42b7ff;
+    font-family: 'Oooh Baby', cursive;
+    transition: .3s
 }
 
 .skills h1>span:hover {
-    text-shadow: 0px 0px 10px rgba(112, 200, 255, 0.65),
-        0px 0px 20px rgba(112, 200, 255, 0.65),
-        0px 0px 30px rgba(112, 200, 255, 0.65),
-        0px 0px 40px rgba(112, 200, 255, 0.65),
-        0px 0px 0px rgba(112, 200, 255, 0.65);
-    color: rgb(112, 200, 255);
+    text-shadow: 0 0 10px rgba(112, 200, 255, .65), 0 0 20px rgba(112, 200, 255, .65), 0 0 30px rgba(112, 200, 255, .65), 0 0 40px rgba(112, 200, 255, .65), 0 0 0 rgba(112, 200, 255, .65);
+    color: #70c8ff
 }
 
 .svg {
-    background: transparent;
-    display: flex;
     align-items: start;
     justify-content: left;
-    width: 90%;
+    width: 90%
 }
 
 .svg>div {
     width: 8vw;
     height: 8vw;
-    margin: 0 2.5vh 0 0;
-    border-radius: 20px
+    margin: 0 2.5vh 0 0
 }
 
 .svg>div>img {
     height: 7vw;
     width: 7vw;
-    background: transparent;
-    transition: all ease .3s;
+    transition: .3s
 }
-
-.svg>div>img:hover {
-    transform: scale(1.1);
-}
-
-
 
 .social {
     justify-content: center;
     flex-wrap: wrap;
-    position: relative;
-    background: #856ad64e;
-    overflow: hidden;
-    /* text-align: justify; */
+    background: #856ad64e
 }
 
 .social>span img {
-    background: transparent;
+    background: 0 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
     height: 83vw;
-    opacity: 1;
+    opacity: 1
 }
 
 .social * {
-    z-index: 1;
+    z-index: 1
 }
 
 .social>h1 {
     cursor: default;
     width: 100%;
     background: #0000003e;
-    padding: 3.7vw;
+    padding: 3.7vw
 }
 
 .social div {
     background-color: transparent;
-    display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: center
 }
 
-.container img{
-    width: 150%;
-    height: 150%;
+.skills>img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    transform: scale(1.6);
+    left: 0;
+    transition: all .2s linear;
 }
 
 .social>h1,
 .social>h1 a {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 4.3vw;
     text-align: left;
-    /* line-height: 1.5; */
-    text-transform: capitalize;
 }
 
 .social>h1 a {
     font-family: 'Poppins', sans-serif;
-    text-transform: lowercase;
+    text-transform: capitalize;
     font-weight: 500;
-    margin: 3.5vh 0;
+    margin: 2vh 0;
     font-size: 5vw;
     position: relative;
-    background: transparent;
+}
+
+.date,
+.desc a,
+.desc>a>h2 {
+    font-weight: 900;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+#contact>h2,
+#contact>h2>span,
+.contain>div h1 {
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5vw
 }
 
 #hover>a {
-    transition: all ease .2s;
+    transition: .2s
 }
 
 #hover>a:hover {
-    transform: scale(1.08);
+    transform: scale(1.08)
 }
 
 .projects {
     width: 100%;
-    height: 100vh;
-    display: flex;
+    min-height: max-content;
     justify-content: center;
 }
 
-#projects{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 2vh 0;
-    flex-wrap: wrap;
+.desc,
+.project{
+    height: max-content;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
 }
 
 .contain {
-    min-height: 95vh;
+    height: 100%;
     width: 95%;
-    display: flex;
     justify-content: start;
     padding: 2vh;
-    border-radius: 20px;
     align-items: start;
     flex-direction: column;
-    background: rgba(59, 56, 56, 0.052);
 }
 
 .contain * {
-    background-color: transparent;
+    background-color: transparent
 }
 
 .contain>div h1 {
-    font-size: 3.5vw;
     font-family: 'Poppins', sans-serif;
     background: #9676f6;
     background: linear-gradient(135deg, #9676f6 41%, #b24bcc 70%);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: default;
+    cursor: default
 }
 
 .contain>div:first-child {
     margin-bottom: 3vh;
     width: 100%;
     display: grid;
-    place-content: center;
+    place-content: center
+}
+
+.date,
+.desc,
+.project {
+    display: flex
 }
 
 .contain>div:last-child {
@@ -617,24 +649,27 @@ html {
     flex-wrap: wrap;
     justify-content: start;
     align-items: start;
-    padding: 2vh 0;
+    padding: 2vh 0
 }
 
 .project {
-    height: max-content;
-    width: 40vw;
-    display: flex;
+    width: auto;
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
+    margin: 2rem;
+    min-height: 60%;
 }
 
+.desc,
+.thumbnail,
+form {
+    width: 100%
+}
 
 .thumbnail {
-    height: max-content;
-    width: 100%;
-    margin-bottom: .8vh;
-    overflow: hidden;
+    height: 20rem;
+    width: auto;
 }
 
 .thumbnail img {
@@ -644,1053 +679,1127 @@ html {
     display: inline;
     object-position: right;
     transform: scale(1.01);
-    filter: brightness(.9) blur(1px);
-    -webkit-filter: brightness(.9) blur(1px);
-    transition: .3s;
+    filter: brightness(.9);
+    -webkit-filter: brightness(.9);
+    transition: .3s
 }
 
-.thumbnail img:hover{
+.thumbnail img:hover {
     filter: brightness(1);
-    -webkit-filter: brightness(1);
+    -webkit-filter: brightness(1)
 }
 
 .desc {
-    display: flex;
     align-items: start;
     flex-direction: column;
-    height: max-content;
     text-align: left;
-    width: 100%;
 }
 
-.desc>a>h2, .desc a{
-    white-space: nowrap;
-    color: rgb(207, 207, 207);
+.desc a,
+.desc>a>h2 {
+    white-space: wrap;
+    color: #cfcfcf;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.5px;
-    font-weight: 900;
+    letter-spacing: .5px;
     font-size: 2rem;
     position: relative;
     transition: .2s;
 }
 
-.desc a h2:hover{
-    color: white;
+.desc a h2:hover {
+    color: #fff
 }
 
 .date {
-    display: flex;
     letter-spacing: 2px;
-    align-items: center;
     position: absolute;
     left: 1vw;
-    font-size: 1.5vw;
-    color: #8c73d4;
-    font-family: 'Poppins', sans-serif;
-    bottom: .5vw;
-    font-weight: 900;
-    cursor: default;
+    bottom: .5vw
+}
+
+.input-box,
+.query {
+    align-items: center;
+    display: flex
 }
 
 #dd,
 #mm {
     font-family: 'Poppins', sans-serif;
-    font-size: 2vw;
-    color: #8c73d4;
+    font-size: 2vw
 }
 
-#mm {
-    font-size: 1.5vw;
+#mm,
+form button {
+    font-size: 1.5vw
 }
 
 .query {
     width: 70vw;
     height: 100vh;
     margin: 5vh 15vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly
 }
 
 .form {
     width: 50%;
-    background-color: rgba(7, 6, 6, 0.1);
-    border-radius: 20px;
-    overflow: hidden;
+    background-color: rgba(7, 6, 6, .1)
 }
 
 form {
     height: 70vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 form * {
-    outline: none;
+    outline: 0
 }
 
-.all{
-    width: 65%;
+.all {
+    width: 65%
 }
 
 .all>* {
-    margin: 2vh 0;
+    margin: 2vh 0
 }
 
 #contact {
     display: flex;
     color: #44434386;
     padding: 2vh;
-    width: 42%;
+    width: 42%
 }
 
-
-#contact>h2, #contact>h2>span {
+#contact>h2,
+#contact>h2>span {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    background: #9D07E8;
+    background: #9d07e8;
     background: linear-gradient(to bottom right, #8c73d4 40%, #5cdeff 105%);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-transform: capitalize;
-    font-size: 3.5vw;
-    line-height: 5vw;
+    line-height: 5vw
 }
-
 
 .input-box {
     position: relative;
-    display: flex;
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
-.input-box img{
+.input-box img {
     height: 2rem;
-    margin-right: 1vh;
+    margin-right: 1vh
 }
 
-.input{
+.input {
     width: 100%;
     padding: 2px 1vh;
     border-radius: 7px;
-    color: rgb(66, 66, 66);
-    background: transparent;
+    color: #424242;
+    background: #f5f5f5;
     font-family: 'Poppins', sans-serif;
     border: none;
     font-size: 1.2vw;
-    background: whitesmoke;
-    font-weight: 500;
+    font-weight: 500
 }
-
-
 
 .all>div:last-child {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
-form button{
+form button {
     background: #720cb1;
-    outline: none;
+    outline: 0;
     border: none;
     padding: 5px 6px;
     text-decoration: none;
     color: #fff;
-    font-size: 1.5vw;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     border-radius: 7px;
     cursor: pointer;
-    transition: .1s;
+    transition: .1s
 }
 
-form button:active{
-    transform: scale(0.98);
+form button:active {
+    transform: scale(.98)
 }
 
-form button:hover{
-    background: #520681;
+form button:hover {
+    background: #520681
 }
 
-
-
-footer{
+footer {
     display: flex;
     justify-content: center;
     background: #060219;
-    margin: 0;
     height: 25px;
     align-items: center;
+    justify-content: center;
 }
-
-footer h3{
+footer h3 {
     font-size: 1.2vw;
     letter-spacing: -1px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
+    font-family: 'Oooh Baby', sans-serif;
+    font-weight: 600;
+    color: gray
+}
+footer h3 span{
+    font-family: cabin;
     color: gray;
+    font-weight: 100;
+    padding: 0 .5vh;
+    font-size: 1vw;
 }
 
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .banner,
+    .container,
+    .cursor,
+    .date {
+        display: none
+    }
 
-@media only screen and (min-width:768px ) and (max-width: 1023px) {
-    .cursor{
-        display: none;
+    .left-nav h3 {
+        font-size: 2.5rem
     }
-     
-    
-    .left-nav h3{
-        font-size: 2.5rem;
+
+    .desk-right-nav {
+        width: 10vw
     }
-    .desk-right-nav{
-        width: 10vw;
+
+    .desk-right-nav a,
+    .title>div:last-child>p {
+        font-size: 2rem
     }
-    .desk-right-nav a{
-        font-size: 2rem;
-    }
-    .me{
+
+    .me {
         height: 35%;
-        width: auto;
+        width: auto
     }
-    .new h3{
+
+    .new h3 {
         font-size: 6.5rem;
         color: #5739b3;
         -webkit-text-stroke: 0;
-        font-weight: 900;
-    }
-    .title>div:last-child> p{
-        font-size: 2rem;
-    }
-    .date, .banner{
-        display: none;
+        font-weight: 900
     }
 
-    #page{
-        height: 70vh;
+    #page {
+        height: 70vh
     }
 
-    .about-me{
-        padding: 8vh 5vh;
+    .about-me {
+        padding: 8vh 5vh
     }
 
-    .about-me h2, .about-me h2 span{
-        font-size: 3rem;
+    .about-me h2,
+    .about-me h2 span {
+        font-size: 3rem
     }
-    .about-me>p{
-        font-size: 2rem;
+
+    .about-me>p,
+    .skills>h4,
+    form button {
+        font-size: 2rem
+    }
+
+    .about-me>p {
         line-height: 3rem;
+        font-size: 2.3rem;
     }
-    .photo{
+
+    .photo {
         height: 100%;
-        padding: 0;
+        padding: 0
     }
-    .photo img{
+
+    .photo img {
         height: 50vh;
-        width: 100%;
+        width: 100%
     }
 
-    .section-3{
+    .section-3 {
         height: max-content;
-        position: relative;
+        position: relative
     }
 
-    .social{
+    .social {
         height: min-content;
-        border-radius: 20px;
+        border-radius: 20px
     }
-    
-    .skills{
+
+    .skills {
         height: inherit;
-        background: none;
+        background: 0 0;
         justify-self: center;
-        padding: 0;
+        padding: 0
     }
 
-    .skills>div:first-child>h1{
-        font-size: 5rem;
+    .skills>div:first-child>h1 {
+        font-size: 5rem
     }
 
-    .skills>h4{
-        font-size: 2rem;
-        width: max-content;
-    }
-    
-    .container{
-        display: none;
+    .skills>h4 {
+        width: max-content
     }
 
-    .contain{
+    .contain {
         height: 100%;
-        width: 100%;
+        width: 100%
     }
 
-    .project{
+    .project {
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
         padding: 0;
         height: 100%;
+        width: 45vw;
     }
 
-    .thumbnail{
+    .thumbnail {
         display: grid;
         place-content: center;
-        height: fit-content;
+        height: fit-content
     }
 
-    .thumbnail img{
-        /* display: none; */
+    .thumbnail img {
         object-fit: contain;
         object-position: top;
         filter: brightness(1);
-        -webkit-filter: brightness(1);
+        -webkit-filter: brightness(1)
     }
 
-    .desc{
+    .desc {
         width: 60%;
         height: 35%;
         align-items: center;
-        text-align: center;
+        text-align: center
     }
 
-    .form, form{
+    .form,
+    form {
         width: 70vw;
         background-color: #100520;
         display: flex;
-        align-items: center;
+        align-items: center
     }
 
-    .input-box{
-        width: 100%;
+    .input,
+    .input-box {
+        width: 100%
     }
 
-    .input-box img{
-        height: 3vw;
+    .input-box img {
+        height: 3vw
     }
 
-    .input{
-        width: 100%;
-        height: 5vh;
+    .input {
+        height: 5vh
     }
 
-    .input::placeholder{
-        font-size: 2rem;
-    }
-
-    form button{
-        font-size: 2rem;
+    .input::placeholder {
+        font-size: 2rem
     }
 }
 
-@media only screen and (min-width: 640px ) and (max-width: 767px) {
-    .cursor{
-        display: none;
+@media only screen and (min-width:640px) and (max-width:767px) {
+
+    .banner,
+    .container,
+    .cursor,
+    .date {
+        display: none
     }
 
-    .about-me>p{
-        color: whitesmoke;
-        font-size: 2.5rem;
-        padding: 4rem;
+    .about-me>p {
+        color: #f5f5f5;
+        font-size: 2.3rem;
+        padding: 0;
     }
-     
-    .left-nav h3{
-        font-size: 3rem;
+
+    .left-nav h3 {
+        font-size: 3rem
     }
-    .desk-right-nav{
-        width: 12vw;
+
+    .desk-right-nav {
+        width: 12vw
     }
-    .desk-right-nav a{
-        font-size: 2.5rem;
+
+    .desk-right-nav a,
+    .title>div:last-child>p {
+        font-size: 2.5rem
     }
-    .me{
+
+    .me {
         height: 35%;
-        width: auto;
+        width: auto
     }
-    .new h3{
+
+    .new h3 {
         font-size: 6.5rem;
         color: #5739b3;
         -webkit-text-stroke: 0;
-        font-weight: 900;
-    }
-    .title>div:last-child> p{
-        font-size: 2.5rem;
-    }
-    .date, .banner{
-        display: none;
+        font-weight: 900
     }
 
-    #page{
-        height: 70vh;
+    #page {
+        height: 70vh
     }
 
-
-    .about-me h2, .about-me h2 span{
-        font-size: 3.3rem;
+    .about-me h2,
+    .about-me h2 span {
+        font-size: 3.3rem
     }
-    .about-me>p>span{
-        font-size: 2.8rem;
+
+    .desc>p,
+    .skills>h4 {
+        font-size: 2.3rem
+    }
+
+    .about-me>p>span {
+        font-size: 2.3rem;
         opacity: 1;
     }
-    .photo{
+
+    .photo {
         height: 100%;
-        padding: 0 3vh;
+        padding: 0 3vh
     }
-    .photo img{
+
+    .photo img {
         height: 50vh;
-        width: 100%;
+        width: 100%
     }
 
-    .section-3{
+    .section-3 {
         height: max-content;
-        position: relative;
+        position: relative
     }
 
-    .social{
+    .social {
         height: min-content;
-        border-radius: 20px;
+        border-radius: 20px
     }
-    
-    .skills{
+
+    .skills {
         height: inherit;
-        background: none;
+        background: 0 0;
         justify-self: center;
-        padding: 0;
+        padding: 0
     }
 
-    .skills>div:first-child>h1{
-        font-size: 5rem;
+    .contain>div:first-child>h1,
+    .skills>div:first-child>h1 {
+        font-size: 5rem
     }
 
-    .skills>h4{
-        font-size: 2.3rem;
+    .skills>h4 {
         width: max-content;
+        font-family: cabin;
+        font-weight: 100;
     }
 
-    .svg>div{
+    .svg>div {
         border-radius: 10px;
     }
-    
-    .container{
-        display: none;
-    }
 
-    .contain{
+    .contain {
         height: 100%;
         width: 100%;
     }
 
-    .contain>div:first-child>h1{
-        font-size: 5rem;
+    .contain>div:first-child{
+        height: fit-content;
+        margin-bottom: 20vh;
     }
 
-    .project{
+    .projects{
+        min-height: 150vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #projects {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .project {
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
         padding: 0;
-        height: 100%;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+        margin-bottom: 10vh;
     }
 
-    .thumbnail{
+    .thumbnail {
         display: grid;
         place-content: center;
-        height: fit-content;
+        border: 0.01px solid grey;
+        width: 70%;
     }
 
-    .thumbnail img{
-        /* display: none; */
+    .thumbnail img {
         object-fit: contain;
-        object-position: top;
+        object-position: center;
+        height: 100%;
+        width: 100%;
         filter: brightness(1);
-        -webkit-filter: brightness(1);
+        -webkit-filter: brightness(1)
     }
 
-    .desc{
-        width: 60%;
-        height: 35%;
+    .desc {
+        width: fit-content;
+        height: auto;
         align-items: center;
-        text-align: center;
+        text-align: center
     }
 
-    .desc>p{
-        font-size: 2.3rem;
+    .desc>a>h2{
+        font-size: 3vw;
     }
 
-    .form, form{
+    .form,
+    form {
         width: 70vw;
         background-color: #100520;
         display: flex;
-        align-items: center;
+        align-items: center
     }
 
-    .all{
-        width: 80%;
+    .all {
+        width: 80%
     }
 
-    .input-box img{
-        height: 3vw;
+    .input-box img {
+        height: 3vw
     }
 
-    .input{
+    .input {
         width: 100%;
-        height: 5vh;
+        height: 5vh
     }
 
-    .input::placeholder, form button{
-        font-size: 2rem;
+    .input::placeholder,
+    form button {
+        font-size: 2rem
     }
 }
 
-@media only screen and (min-width: 521px ) and (max-width: 639px) {
-    .cursor{
-        display: none;
+@media only screen and (min-width:521px) and (max-width:639px) {
+
+    .banner,
+    .container,
+    .cursor,
+    .date {
+        display: none
     }
 
-    .left-nav{
-        width: max-content;
+    .left-nav {
+        width: max-content
     }
 
-    .about-me>p{
-        color: whitesmoke;
+    .about-me>p {
+        color: #f5f5f5;
         font-size: 4.2rem;
-        padding: 4rem;
+        padding: 4rem
     }
 
-    .left-nav h3{
-        font-size: 4.5rem;
+    .left-nav h3 {
+        font-size: 4.5rem
     }
-    .desk-right-nav{
+
+    .desk-right-nav {
         width: 20%;
-        height: 11vh;
-    }
-    .desk-right-nav a{
-        font-size: 3.6rem;
+        height: 11vh
     }
 
-    .section{
-        height: 100dvh;
+    .desk-right-nav a {
+        font-size: 3.6rem
     }
 
-    .image{
-        height: 80vh;
+    .section {
+        height: 100dvh
     }
-    .me{
+
+    .image {
+        height: 80vh
+    }
+
+    .me {
         height: 27vh;
-        width: auto;
+        width: auto
     }
-    .new h3{
+
+    .about-me,
+    .photo {
+        width: 100dvw !important
+    }
+
+    .new h3 {
         font-size: 7rem;
         color: #5739b3;
         -webkit-text-stroke: 0;
-        font-weight: 900;
+        font-weight: 900
     }
-    .title>div:last-child> p{
+
+    .title>div:last-child>p {
         font-size: 4rem;
         text-align: center;
         padding: 1vh;
         border-right: 2px solid #856ad6;
-        border-left: 2px solid #856ad6;
-    }
-    .date, .banner{
-        display: none;
+        border-left: 2px solid #856ad6
     }
 
-    #page{
+    #page {
         height: 100vh;
         flex-direction: column-reverse;
-        width: 100vw;
+        width: 100vw
     }
 
-    .about-me, .photo{
+    .about-me,
+    .photo {
         border-radius: 0;
         height: 55dvh;
-        background-color: transparent;
+        background-color: transparent
     }
 
-    .about-me{
-        width: 100dvw !important;
+    .about-me {
         text-align: center;
         justify-content: flex-start;
         align-items: center;
-        padding: 0 3vh;
+        padding: 0 3vh
     }
 
-
-    .about-me h2, .about-me h2 span{
+    .about-me h2,
+    .about-me h2 span {
         font-size: 7rem;
-        opacity: 1;
+        opacity: 1
     }
-    
-    .about-me>p>span{
+
+    .about-me>p>span {
         font-size: 3.7rem;
         line-height: 1.3;
-        color: white;
-        opacity: 1;
-    }
-    .photo{
-        width: 100dvw !important;
-        height: 45vh;
-    }
-    .photo img{
-        height: 35vh;
-        border-radius: 100%;
-        width: 35vh;
+        color: #fff;
+        opacity: 1
     }
 
-    .section-3{
+    .photo {
+        height: 45vh
+    }
+
+    .photo img {
+        height: 35vh;
+        border-radius: 100%;
+        width: 35vh
+    }
+
+    .section-3 {
         height: fit-content;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         padding: 0;
-        margin-top: 8vh;
+        margin-top: 8vh
     }
 
-    .social{
+    .social {
         height: auto;
         width: 100%;
         border-radius: 0;
-        margin-bottom:5vh;
+        margin-bottom: 15vh
     }
 
-    .social>h1, .social>h1>span{
+    .social>h1,
+    .social>h1>span {
         font-size: 8rem;
-        text-align: center;
+        text-align: center
     }
 
-    #hover{
-        justify-content: center;
+    #hover {
+        justify-content: center
     }
 
-    #hover a{
-        font-size: 7.8rem;
+    #hover a {
+        font-size: 7.8rem
     }
-    
-    .skills{
+
+    .skills {
         height: inherit;
-        background: none;
+        background: 0 0;
         padding: 0 1vh;
         width: 100%;
-        margin: 0;
     }
 
-    .skills>div:first-child>h1{
+    .contain,
+    .form,
+    form {
+        background-color: transparent
+    }
+
+    .skills>div:first-child>h1 {
         font-size: 12rem;
-        width: 90%;
+        width: 90%
     }
 
-    .svg{
-        width: fit-content;
+    .svg {
+        width: fit-content
     }
 
-    .skills>h4{
+    .skills>h4 {
         font-size: 4rem;
         padding: 3px 2px;
-        width: max-content;
+        width: max-content
     }
 
-    .svg>div{
+    .svg>div {
         border-radius: 10px;
         height: 16vw;
-        width: 16vw;
+        width: 16vw
     }
 
-    .svg>div>img{
+    .svg>div>img {
         height: 12rem;
-        width: auto;
-    }
-    
-    .container{
-        display: none;
+        width: auto
     }
 
-    .contain{
+    .contain {
         height: 100%;
-        background-color: transparent;
         border-radius: 0;
         width: 100%;
     }
-    
-    .contain>div:first-child>h1{
-        font-size: 9rem;
+
+    .contain>div:first-child>h1 {
+        font-size: 9rem
     }
 
-    .project{
+    .project {
         flex-direction: column;
         align-items: center;
         height: 100%;
-        padding-left:1vh;
-        display: flex;
+        padding-left: 1vh;
+        width: 100%;
+        margin-bottom: 2vh;
+        display: flex
     }
 
-    .thumbnail{
+    #projects {
+        display: grid;
+        gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+    }
+
+    .desc,
+    .thumbnail {
+        height: fit-content
+    }
+
+    .thumbnail,.desc {
         display: grid;
         place-content: center;
-        height: fit-content;
-        width: fit-content;        
+        width: fit-content
     }
 
-    .thumbnail img{
+    .thumbnail img {
         object-fit: contain;
         object-position: top;
         filter: brightness(1);
         -webkit-filter: brightness(1);
         height: 40vw;
-        width: auto;
+        width: auto
     }
 
-    .desc{
+    .desc {
         width: 100%;
-        height: fit-content;
         align-items: center;
         padding: 0;
         text-align: center;
     }
 
-    .desc>a>h2{
-        font-size: 6rem;
+    .desc>a>h2 {
+        font-size: 4vw;
     }
 
-    .desc>p{
+    .desc>p {
         font-size: 3.5rem;
         line-height: 1.5;
-        width: 100%;
+        width: 100%
     }
 
-    .query{
+    .query {
         flex-direction: column;
         width: 100vw;
         margin-left: 0;
         height: max-content;
         justify-content: center;
+        margin-top: 15vh;
     }
 
-    .query #contact{
+    .query #contact {
         width: 60%;
-        padding: 0;
+        padding: 0
     }
 
-    .query #contact>h2,.query #contact>h2>span{
+    .query #contact>h2,
+    .query #contact>h2>span {
         font-size: 6rem;
-        line-height: 1;
+        line-height: 1
     }
 
-    .form, form{
-        background-color: transparent;
+    .form,
+    form {
         width: 100dvw;
-        height: 50vh;
+        height: 50vh
     }
 
-    .all{
-        width: 65%;
+    .all {
+        width: 65%
     }
 
-    .input-box img{
-        height: 4vh;
+    .input-box img {
+        height: 4vh
     }
 
-    .input{
+    .input {
         width: 100%;
         height: 6vh;
+        font-size: 3rem
+    }
+
+    .input::placeholder,
+    form button {
         font-size: 3rem;
+        color: #000
     }
 
-    .input::placeholder, form button{
-        font-size: 3rem;
-        color: #000;
+    form button {
+        color: #fff
     }
 
-    form button{
-        color: white;
-    }
-
-    footer h3{
-        font-size: 2rem;
+    footer h3 {
+        font-size: 2rem
     }
 }
 
-@media only screen and (min-width: 320px ) and (max-width: 520px) {
-    .cursor{
-        display: none;
+@media only screen and (min-width:320px) and (max-width:520px) {
+
+    html,body{
+        overflow-x: hidden;
     }
 
-    .about-me>p{
+    .contain,
+    .social {
+        border-radius: 0
+    }
+
+    .banner,
+    .container,
+    .cursor,
+    .date {
+        display: none
+    }
+
+    .about-me>p {
         font-size: 4.3vw;
-        color: whitesmoke;
+        color: #f5f5f5;
         line-height: 1.3;
         height: max-content;
         width: 100%;
-        padding: 4%;
-    } 
-
-    .left-nav{
-        width: 20%;
+        padding: 4%
     }
 
-    .left-nav h3{
-        font-size: 5.5rem;
-    }
-    .desk-right-nav{
-        width: 23%;
-        /* height: 10%; */
-    }
-    .desk-right-nav a{
-        font-size: 4.3rem;
+    .input,
+    .left-nav h3 {
+        font-size: 5.5rem
     }
 
-    .section{
-        height: 100dvh;
+    .left-nav {
+        width: 20%
     }
 
-    .image{
-        height: 80vh;
+    .desk-right-nav {
+        width: 23%
     }
-    .me{
+
+    .desk-right-nav a {
+        font-size: 4.3rem
+    }
+
+    .section {
+        height: 100dvh
+    }
+
+    .image {
+        height: 80vh
+    }
+
+    .me {
         height: 27vh;
-        width: auto;
+        width: auto
     }
-    .new h3{
+
+    .new h3 {
         font-size: 8.5rem;
         color: #5739b3;
         -webkit-text-stroke: 0;
-        font-weight: 900;
+        font-weight: 900
     }
-    .title>div:last-child> p{
+
+    .title>div:last-child>p {
         font-size: 4.5rem;
         text-align: center;
         padding: 1vh;
         border-right: 2px solid #856ad6;
-        border-left: 2px solid #856ad6;
-    }
-    .date, .banner{
-        display: none;
+        border-left: 2px solid #856ad6
     }
 
-    #page{
+    #page {
         height: 100vh;
         flex-direction: column-reverse;
-        width: 100vw;
+        width: 100vw
     }
 
-    .about-me, .photo{
+    .about-me,
+    .photo {
         border-radius: 0;
         height: 55dvh;
         padding: 3vh;
-        background-color: transparent;
+        background-color: transparent
     }
 
-    .about-me{
+    .about-me {
         width: 100dvw;
         text-align: center;
         justify-content: flex-start;
         align-items: center;
-        min-height: max-content;
+        height: fit-content;
         padding: 0 3vh;
     }
 
-
-    .about-me h2, .about-me h2 span{
+    .about-me h2,
+    .about-me h2 span {
         font-size: 8rem;
-        opacity: 1;
+        opacity: 1
     }
+
     
-    .about-me>p>span{
-        font-size: 5rem;
+    .about-me>p{
+        font-size: 5vw;
         line-height: 1.3;
-        color: white;
+        color: #fff;
         opacity: 1;
+        font-weight: 100;
     }
-    .photo{
+    .photo {
         width: 100dvw !important;
-        height: 45vh;
+        height: 45vh
     }
-    .photo img{
+
+    .photo img {
         height: 35vh;
         border-radius: 100%;
-        width: 35vh;
+        width: 35vh
     }
 
-    .section-3{
+    .section-3 {
         height: fit-content;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         padding: 0;
-        margin-top: 8vh;
+        margin-top: 8vh
     }
 
-    .social{
+    .social {
         height: auto;
         width: 100%;
-        border-radius: 0;
-        margin-bottom:5vh;
+        margin-bottom: 5vh
     }
 
-    .social>h1, .social>h1>span{
+    .social>h1,
+    .social>h1>span {
         font-size: 10rem;
-        text-align: center;
+        text-align: center
     }
 
-    #hover{
-        justify-content: center;
+    #hover {
+        justify-content: center
     }
 
-    #hover a{
-        font-size: 9rem;
+    #hover a {
+        font-size: 9rem
     }
-    
-    .skills{
-        height: inherit;
-        background: none;
+
+    .skills {
+        height: fit-content;
+        background: 0 0;
         padding: 0 1vh;
         width: 100%;
+    }
+
+    .contain,
+    .form,
+    form {
+        background-color: transparent
+    }
+    .skills>div:first-child{
+        height: auto;
+        padding-left: 2vh;
         margin: 0;
     }
-
-    .skills>div:first-child>h1{
-        font-size: 12rem;
-        width: 90%;
+    .skills>div:first-child>h1 {
+        font-size: 10vw;
+        width: 90%
     }
 
-    .svg{
-        width: fit-content;
+    .svg {
+        width: fit-content
     }
 
-    .skills>h4{
-        font-size: 5rem;
+    .contain,
+    .svg>div>img {
+        width: 100%;
+        height: 100%
+    }
+
+    .skills>h4 {
+        font-size: 4vw;
         padding: 3px 2px;
         width: max-content;
+        font-family: cabin;
+        font-weight: 100;
     }
 
-    .svg>div{
+    .svg>div {
         border-radius: 10px;
         height: 16vw;
-        width: 16vw;
+        width: 16vw
     }
 
-    .svg>div>img{
-        height: 100%;
-        width: 100%;
+    .contain>div:first-child>h1 {
+        font-size: 13rem
+    }
+
+    #projects{
+        display: grid;
+        gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
     }
     
-    .container{
-        display: none;
-    }
-
-    .contain{
-        height: 100%;
-        background-color: transparent;
-        border-radius: 0;
-        width: 100%;
-    }
-    
-    .contain>div:first-child>h1{
-        font-size: 13rem;
-    }
-
-    .project{
+    .project {
         flex-direction: column;
+        margin-bottom: 2vh;
         align-items: center;
         height: 100%;
-        padding-left:1vh;
-        display: flex;
+        width: 100%;
+        justify-content: center;
+        display: flex
     }
 
-    .thumbnail{
+    .desc,
+    .thumbnail {
+        height: fit-content
+    }
+    
+    .thumbnail {
+        border: 0.01px solid grey;
         display: grid;
         place-content: center;
-        height: fit-content;
-        width: fit-content;        
+        width: fit-content
     }
 
-    .thumbnail img{
+    .thumbnail img {
         object-fit: contain;
         object-position: top;
         filter: brightness(1);
         -webkit-filter: brightness(1);
         height: 23vh;
-        width: auto;
+        width: auto
     }
 
-    .desc{
+    .desc {
         width: 100%;
-        height: fit-content;
         align-items: center;
         padding: 0;
         text-align: center;
     }
-
-    .desc>a>h2{
-        font-size: 8rem;
-    }
-
-    .desc>p{
-        font-size: 5rem;
-        line-height: 1.5;
+    .desc>a{
         width: 100%;
     }
 
-    .query{
+    .desc>a>h2 {
+        font-size: 5vw;
+    }
+
+    .query {
         flex-direction: column;
         width: 100vw;
         margin-left: 0;
         height: max-content;
-        justify-content: center;
+        justify-content: center
     }
 
-    .query #contact{
+    .query #contact {
         width: 80%;
-        padding: 0;
+        padding: 0
     }
 
-    .query #contact>h2,.query #contact>h2>span{
+    .query #contact>h2,
+    .query #contact>h2>span {
         font-size: 8rem;
-        line-height: 1;
+        line-height: 1
     }
 
-    .form, form{
-        background-color: transparent;
+    .form,
+    form {
         width: 100dvw;
-        height: 50vh;
+        height: 50vh
     }
 
-    .all{
-        width: 65%;
+    .all {
+        width: 65%
     }
 
-    .input-box img{
-        height: 4vh;
+    .input-box img {
+        height: 4vh
     }
 
-    .input{
+    .input {
         width: 100%;
-        height: 6vh;
-        font-size: 5.5rem;
+        height: 6vh
     }
 
-    .input::placeholder, form button{
+    .input::placeholder,
+    form button {
         font-size: 4rem;
-        color: #000;
+        color: #000
     }
 
-    textarea{
-        /* resize:auto; */
-        /* height: fit-content; */
-        width: inherit !important;
+    textarea {
+        width: inherit !important
     }
 
-    form button{
-        color: white;
+    form button {
+        color: #fff
     }
 
-    footer h3{
-        font-size: 3rem;
+    footer h3 {
+        font-size: 3rem
     }
 }
